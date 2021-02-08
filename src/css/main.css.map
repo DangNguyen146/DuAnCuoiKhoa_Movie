@@ -1,0 +1,23 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/main.scss",
+        "../sass/base/base.scss",
+        "../sass/base/_customize.scss",
+        "../sass/base/_reset.scss",
+        "../sass/components/components.scss",
+        "../sass/components/button.scss",
+        "../sass/helper/helper.scss",
+        "../sass/helper/_mixin.scss",
+        "../sass/helper/_variable.scss",
+        "../sass/layouts/layout.scss",
+        "../sass/pages/pages.scss",
+        "../sass/theme/theme.scss",
+        "../sass/theme/dark/dark.scss",
+        "../sass/theme/light/light.scss",
+        "../sass/vendor/vendor.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
