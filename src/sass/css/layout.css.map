@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../layouts/layout.scss"
-    ],
-    "names": [],
-    "file": "layout.css"
-}
