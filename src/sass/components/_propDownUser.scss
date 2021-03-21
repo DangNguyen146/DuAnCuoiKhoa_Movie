@@ -1,0 +1,100 @@
+#propDownUser {
+    .dropdown {
+        padding: 0.375rem 0rem 0.375rem 5.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fb543b;
+        position: relative;
+        font-size: 17px;
+        perspective: 1000px;
+        z-index: 100;
+        &:hover {
+            // background: #fb543b;
+            cursor: pointer;
+        }
+        &:hover .dropdown_menu li {
+            display: block;
+        }
+        &:hover .dropdown_menu--animated {
+            display: block;
+        }
+        ul {
+            opacity: 0;
+            border-radius: 0.25rem;
+            padding: 0.375rem 0.75rem;
+            transform: translateX(60px);
+            transition: all 350ms;
+        }
+        &:hover ul {
+            opacity: 1;
+            transform: translateX(0);
+            background-color: #fb543b;
+        }
+    }
+    .dropdown_menu {
+        position: absolute;
+        padding: 0.375rem 1rem;
+        // border-radius: 0.25rem;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        perspective: 1000px;
+        z-index: -1;
+        li {
+            display: none;
+            border-radius: 0.25rem;
+            color: #fff;
+            background-color: #fb543b;
+            padding: 10px 40px 7px 2px;
+            margin: 0 0.3rem;
+            font-size: 16px;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        li > a {
+            text-decoration: none;
+            color: #fff;
+        }
+        li:hover {
+            opacity: 1;
+            background-color: hsla(0, 0%, 100%, 0.3);
+        }
+        i {
+            width: 15px;
+            margin-right: 0.7rem;
+        }
+    }
+
+    .dropdown_menu-5 {
+        .dropdown_item-1 {
+            transform-origin: top center;
+            animation: translateX 300ms 60ms ease-in-out forwards;
+        }
+        .dropdown_item-2 {
+            transform-origin: top center;
+            animation: translateX 300ms 120ms ease-in-out forwards;
+        }
+        .dropdown_item-3 {
+            transform-origin: top center;
+            animation: translateX 300ms 180ms ease-in-out forwards;
+        }
+        .dropdown_item-4 {
+            transform-origin: top center;
+            animation: translateX 300ms 240ms ease-in-out forwards;
+        }
+        @keyframes translateX {
+            0% {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+            80% {
+                transform: translateX(-5px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+    }
+}

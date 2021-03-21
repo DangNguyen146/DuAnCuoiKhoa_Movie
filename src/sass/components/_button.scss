@@ -1,0 +1,18 @@
+.btn-redorange {
+    color: #fff !important;
+    background-color: #fb543b !important;
+    border-color: #fb543b !important;
+    transition: all 0.2s;
+    &:hover {
+        background-color: #ff7958 !important;
+        border-color: rgb(255, 149, 88) !important;
+    }
+}
+.btn-outline-redorange {
+    color: #fb543b !important;
+    border-color: #fb543b !important;
+    &:hover {
+        color: rgb(255, 121, 88) !important;
+        border-color: rgb(255, 121, 88) !important;
+    }
+}

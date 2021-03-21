@@ -1,0 +1,105 @@
+.listMoviePage {
+    position: relative;
+    // padding: 3rem 0;
+    .MuiAppBar-colorPrimary {
+        color: $color-gray;
+        background-color: #fff;
+    }
+    .MuiBox-root {
+        padding: 0px;
+    }
+    .btnSlick {
+        .btnLeft {
+            top: 45%;
+            img {
+                width: 100px;
+                height: 100px;
+            }
+            position: absolute;
+            @media (min-width: 500px) {
+                left: -10%;
+            }
+            @media (min-width: 1650px) {
+                left: -12%;
+            }
+        }
+        .btnRight {
+            position: absolute;
+            top: 45%;
+            img {
+                width: 100px;
+                height: 100px;
+            }
+            @media (min-width: 500px) {
+                right: -10%;
+            }
+            @media (min-width: 1650px) {
+                right: -12%;
+            }
+        }
+    }
+    .slick-slider {
+        padding: $pd-1 0;
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+            0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+        // .slick-list {
+        //     @media (max-width: 576px) {
+        //         // height: 2004px;
+        //     }
+        //     @media (min-width: 576px) {
+        //         // height: 792px;
+        //     }
+        //     @media (min-width: 768px) {
+        //         // height: 1122px;
+        //     }
+        //     @media (min-width: 1200px) {
+        //         // height: 756px;
+        //     }
+        // }
+    }
+    // @media (max-width: 576px) {
+    //     // height: 700px;
+    // }
+    // @media (min-width: 576px) {
+    // }
+}
+#listmovieitem {
+    .card {
+        @media (min-width: 992px) {
+            height: 370px;
+        }
+        .listItemImg {
+            img {
+                width: 100%;
+                @media (max-width: 576px) {
+                    height: 248px;
+                }
+                @media (min-width: 576px) {
+                    height: 178px;
+                }
+                @media (min-width: 768px) {
+                    height: 252px;
+                }
+                @media (min-width: 992px) {
+                    height: 230px;
+                }
+                @media (min-width: 1200px) {
+                    height: 272px;
+                }
+            }
+        }
+    }
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+    }
+
+    // Large devices (desktops, 992px and up)
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+    }
+}
