@@ -2,10 +2,22 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { HUY_GHE } from "./Modules/constant";
 import { huyGeAction } from "./Modules/action";
+import { actDatVeApi } from "./moduls/aciton";
 import "./mainTicket.css";
+import { Button } from "@material-ui/core";
 
 class ThongTinDatGhe extends Component {
   render() {
+    const { thongTinPhim } = this.props;
+    let temp = {
+      maLichChieu: thongTinPhim.maLichChieu,
+      danhSachVe: [],
+      taiKhoanNguoiDung: this.props.userLoginReducer.taiKhoan,
+    };
+    const handleOnClick = () => {
+      console.log(this.props.userLoginReducer.accessToken);
+      this.props.fetchCreate(temp, this.props.userLoginReducer.accessToken);
+    };
     return (
       <>
         <div className="listGheDat ">
@@ -19,6 +31,10 @@ class ThongTinDatGhe extends Component {
             </thead>
             <tbody className="listGheDat">
               {this.props.dangSachGheDangDat.map((gheDangDat, index) => {
+                temp.danhSachVe.push({
+                  maghe: gheDangDat.maGhe,
+                  giave: gheDangDat.giaVe,
+                });
                 return (
                   <tr key={{ index }}>
                     <td>{gheDangDat.maGhe}</td>
@@ -38,36 +54,6 @@ class ThongTinDatGhe extends Component {
               })}
             </tbody>
           </table>
-          {/* <table className="table" border="2">
-            <thead>
-              <tr className="">
-                <th>Số ghế</th>
-                <th>Giá</th>
-                <th>Hủy</th>
-              </tr>
-            </thead>
-            <tbody className="text-warning  ">
-              {this.props.dangSachGheDangDat.map((gheDangDat, index) => {
-                return (
-                  <tr key={{ index }}>
-                    <td>{gheDangDat.maGhe}</td>
-                    <td>{gheDangDat.giaVe.toLocaleString()}</td>
-                    <td>
-                      <button
-                        className="btn btn-outline-redorange"
-                        onClick={() => {
-                          this.props.dispatch(huyGeAction(gheDangDat.maGhe));
-                        }}
-                      >
-                        Hủy
-                      </button>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table> */}
-          {/* <hr className="mt-0 pt-0" /> */}
         </div>
         <h4 className="text-redorange text-center">Tổng số tiền</h4>
         <h2 className="text-redorange text-center font-weight-bold">
@@ -77,7 +63,9 @@ class ThongTinDatGhe extends Component {
             }, 0)
             .toLocaleString()}
         </h2>
-        <button className="btn btn-redorange w-100">Đặt vé</button>
+        <Button className="btn btn-redorange w-100" onClick={handleOnClick}>
+          Đặt vé
+        </Button>
       </>
     );
   }
@@ -86,6 +74,14 @@ class ThongTinDatGhe extends Component {
 const mapStateToProps = (state) => {
   return {
     dangSachGheDangDat: state.DatVeReducer.dangSachGheDangDat,
+    userLoginReducer: state.userLoginReducer.data,
   };
 };
-export default connect(mapStateToProps)(ThongTinDatGhe);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchCreate: (object, token) => {
+      dispatch(actDatVeApi(object, token));
+    },
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(ThongTinDatGhe);

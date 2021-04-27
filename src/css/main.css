@@ -1172,6 +1172,29 @@ footer .img-social .row .row img:hover {
   text-decoration: none !important;
 }
 
+.profile .avatar-proflie .logo {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+  color: white;
+  border-radius: 50%;
+}
+
+.profile .avatar-proflie .logo h1 {
+  transform: translateY(50%);
+}
+
+.profile .profile-item2 .nav-item .active {
+  color: #fb543b !important;
+  font-weight: 500 !important;
+}
+
+.profile .profile-item2 .nav-item a {
+  color: #000 !important;
+  font-weight: 500 !important;
+}
+
 html,
 body {
   padding: 34px 0 0 0;

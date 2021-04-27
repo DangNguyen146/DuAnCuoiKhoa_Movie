@@ -4,6 +4,7 @@ import CinemaDetail from "../container/HomeTemplate/CinemaDetail";
 import CinemaItem from "../container/HomeTemplate/CinemaItem";
 import MobileCumRap from "../container/HomeTemplate/CinemaListMovie/MobileCumRap";
 import DetailPage from "../container/HomeTemplate/DetailPage";
+import User from "../container/HomeTemplate/User";
 import HomePage from "./../container/HomeTemplate/HomePage";
 
 const routeHome = [
@@ -35,6 +36,11 @@ const routeHome = [
   {
     path: "/login",
     component: AccUser,
+    exact: false,
+  },
+  {
+    path: "/user",
+    component: User,
     exact: false,
   },
 ];

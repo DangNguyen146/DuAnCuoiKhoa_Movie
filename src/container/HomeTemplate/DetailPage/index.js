@@ -140,6 +140,7 @@ class DetailMovie extends Component {
                     src={data && data.hinhAnh}
                     alt=""
                   />
+                  {/* <img src={data && data.hinhAnh} className="w-100" alt="" /> */}
                   <img
                     className="w-25 d-none d-sm-block d-lg-none text-center"
                     src={data && data.hinhAnh}

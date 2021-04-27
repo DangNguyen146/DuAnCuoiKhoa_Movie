@@ -1,0 +1,28 @@
+.profile {
+    .avatar-proflie {
+        // height: 35vh;
+        .logo {
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            color: white;
+            border-radius: 50%;
+            h1 {
+                transform: translateY(50%);
+            }
+        }
+    }
+    .profile-item2 {
+        .nav-item {
+            .active {
+                color: #fb543b !important;
+                font-weight: 500 !important;
+            }
+            a {
+                color: $color-black !important;
+                font-weight: 500 !important;
+            }
+        }
+    }
+}
