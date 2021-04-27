@@ -19,13 +19,19 @@ class User extends Component {
               <i className="fa fa-angle-down"></i>
               <ul className="dropdown_menu dropdown_menu-5">
                 <li className="dropdown_item-1">
-                  <i className="fa fa-history"></i>Lịch sử đặt vé
+                  <NavLink to="/user">
+                    <i className="fa fa-history"></i>Lịch sử đặt vé
+                  </NavLink>
                 </li>
                 <li className="dropdown_item-2">
-                  <i className="fa fa-user"></i>Thông tin cá nhân
+                  <NavLink to="/user">
+                    <i className="fa fa-user"></i>Thông tin cá nhân
+                  </NavLink>
                 </li>
                 <li className="dropdown_item-3">
-                  <i className="fa fa-user-edit"></i>Cập nhật thông tin
+                  <NavLink to="/user">
+                    <i className="fa fa-user-edit"></i>Cập nhật thông tin
+                  </NavLink>
                 </li>
                 <li className="dropdown_item-4">
                   <NavLink
@@ -46,7 +52,7 @@ class User extends Component {
             </p>
             <NavLink
               className="btn text-redorange btn-outline-redorange btn-focus"
-              to="/"
+              to="/user"
             >
               Quản lí tài khoản
             </NavLink>

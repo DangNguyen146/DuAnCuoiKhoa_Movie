@@ -14,6 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "animate.css/animate.min.css";
 
 import "./css/main.css";
+// import "./sass/main.scss";
 
 import { createStore, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";

@@ -30,47 +30,10 @@ class HangGhe extends Component {
           className={`seat ${cssGheDatDat} ${cssGheDangDat}`}
           key={{ index }}
           disabled={disabled}
-        >
-          {/* {ghe.maGhe} */}
-        </div>
+        ></div>
       );
     });
-    // return object.map((ghe, index) => {
-    //   let cssGheDatDat = "";
-    //   let disabled = false;
-    //   //trạng thái ghế đã bị người khác đặt rồi
-    //   if (ghe.daDat) {
-    //     cssGheDatDat = "gheDuocChon";
-    //     disabled = true;
-    //   }
-    //   //xét trạng thái đang đặt
-    //   let cssGheDangDat = "";
-    //   let indexGheDangDat = object.findIndex(
-    //     (gheDangDat) => gheDangDat.maGhe === ghe.maGhe
-    //   );
-    //   if (indexGheDangDat !== -1) {
-    //     cssGheDangDat = "gheDangChon";
-    //   }
-    //   return (
-    //     <div
-    //       // onClick={() => {
-    //       //   this.props.datGhe(ghe);
-    //       // }}
-    //       disabled={disabled}
-    //       // ${cssGheDatDat} ${cssGheDangDat}
-    //       className={`seat`}
-    //       key={{ index }}
-    //     >
-    //       {index + 1}
-    //     </div>
-    //   );
-    // });
   };
-  // renderSoHang = (object) => {
-  //   return object.map((hang, index) => {
-  //     return <button className="rowNumber">{hang.maGhe}</button>;
-  //   });
-  // };
   renderHangGhe = (object) => {
     var i = 0;
     var arrTemp = [0, 1, 2, 3, 4, 5, 6, 7];

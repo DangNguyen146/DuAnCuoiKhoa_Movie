@@ -9,6 +9,7 @@ import ttlpCinemaReducer from "./../../container/HomeTemplate/CinemaListMovie/mo
 import detailMovieReducer from "./../../container/HomeTemplate/DetailPage/modules/reducer";
 import DatVeReducer from "./../../container/HomeTemplate/BookingTicket/Modules/datveReducer";
 import lichChieuReducer from "./../../container/HomeTemplate/BookingTicket/Modules2/reducer";
+import HistoryReducer from "./../../container/HomeTemplate/User/Modules/reducer";
 
 const rootReducer = combineReducers({
   userCreateReducer,
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
   detailMovieReducer,
   lichChieuReducer,
   DatVeReducer,
+  HistoryReducer,
 });
 
 export default rootReducer;

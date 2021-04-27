@@ -150,7 +150,7 @@ class BookingTicket extends Component {
                   <img src={data.thongTinPhim.hinhAnh} width="50%" alt="" />
                   <h4>{data.thongTinPhim.tenPhim}</h4>
                 </div>
-                <ThongTinDatGhe />
+                <ThongTinDatGhe key={1} thongTinPhim={data.thongTinPhim} />
               </div>
             </div>
           </div>

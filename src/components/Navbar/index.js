@@ -13,7 +13,12 @@ export default class NavbarHome extends Component {
       >
         <div className="navbar-star " style={{ width: 150 }}>
           <NavLink className="nav-link navbar-brand" to="/">
-            <img src="./img/web-logo.png" width="40px" height="40px" alt="" />
+            <img
+              src="./img/public/web-logo.png"
+              width="40px"
+              height="40px"
+              alt=""
+            />
           </NavLink>
         </div>
         {/* responsive */}
