@@ -1,0 +1,47 @@
+.cinemaItem {
+    width: 100%;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cinemaItem .backGround-cinemaItem {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    background-image: url("./img/bhd-star-bitexco-16105952178872.png");
+    filter: blur(15px);
+  }
+  
+  .cinemaItem .overplayCinemaItem {
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    background-color: rgba(255, 255, 255, 0.123);
+  }
+  
+  .cinemaItem .gradientMovieItem {
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    background: linear-gradient(to top, #fff, rgba(255, 255, 255, 0));
+  }
+  
+  .cinemaItem .cinemaItem-content {
+    position: absolute;
+  }
+  
+  .cinemaItem .cinemaItem-content {
+    position: relative;
+    margin: 50px auto;
+  }
+  
+  .cinemaItem .cinemaItem-content img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
+  }
+  

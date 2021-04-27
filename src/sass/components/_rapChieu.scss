@@ -1,0 +1,38 @@
+.getTicket {
+    height: 100vh;
+    width: 100%;
+    .container-fluit {
+        height: 100vh;
+        .getTicket-main {
+            .row {
+                .Img-getTicket {
+                    position: relative;
+                    .anh-getTicket {
+                        position: absolute;
+                        img {
+                            width: 100%;
+                            filter: blur(6px);
+                        }
+                        height: 80vh;
+                        overflow: hidden;
+                    }
+                    .color-overplay {
+                        position: absolute;
+                        width: 100%;
+                        height: 80vh;
+                        background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0.438));
+                    }
+                }
+            }
+        }
+        #five-countdown {
+            margin: 0 auto;
+            width: 50%;
+            border: 2px solid rgb(49, 49, 49);
+        }
+        .getMobeyTicket {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            height: 100vh;
+        }
+    }
+}

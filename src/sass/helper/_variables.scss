@@ -1,0 +1,41 @@
+//variable color
+$color-black: #000;
+$color-gray: #333;
+$color-gray-1: #4a4a4a;
+$color-gray-2: #9b9b9b;
+$color-gray-3: #ebebec;
+$color-gray-4: #949494;
+$color-gray-5: #e4e4e4;
+$color-gray-6: rgba(246, 246, 246, 0.5);
+$color-red-0: #fb4226;
+$color-red-1: #fa5238;
+$color-red-01: #fb4226;
+$color-yellow: #e5a813;
+$color-green: #00ac4d;
+$color-purpel: #df0d7a;
+$color-white: #fff;
+$color-main: #fb543b;
+// font size
+$fs-0: 13px;
+$fs-1: 14px;
+$fs-2: 20px;
+$fs-3: 24px;
+//variable border-radius
+$border-radius: 4px;
+//variable padding
+$pd-0: 5px; //default
+$pd-1: 10px;
+$pd-2: 20px;
+//variable font-weight
+$fw-normal: normal;
+$fw-normal-1: 400;
+$fw-bold-0: 600;
+$fw-bold-1: 700;
+$fw-bold: bold;
+//break points
+$breakpoints: (
+    "extra-large": 1200px,
+    "large": 992px,
+    "medium": 768px,
+    "small": 576px,
+);

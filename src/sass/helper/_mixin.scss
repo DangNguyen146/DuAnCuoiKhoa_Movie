@@ -1,0 +1,76 @@
+.text-redorange {
+    color: #fb543b !important;
+    font-weight: 500 !important;
+}
+
+@mixin styleText($fs, $color, $fw) {
+    font-size: $fs;
+    color: $color;
+    font-weight: $fw;
+}
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+    // For Google Chrome
+    &::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+        border-radius: $border-radius;
+    }
+    &::-webkit-scrollbar-track {
+        background: $background-color;
+    }
+    // For Internet Explorer
+    & {
+        scrollbar-face-color: $foreground-color;
+        scrollbar-track-color: $background-color;
+    }
+}
+
+@mixin cinemaMovieTime() {
+    border: 1px solid $color-gray-5;
+    background-color: $color-gray-6;
+    border-radius: $border-radius;
+    color: $color-green;
+    align-items: center;
+    text-align: center;
+    &:hover {
+        color: $color-red-0;
+    }
+    span {
+        font-size: 10px;
+        color: $color-gray-2;
+    }
+}
+
+@mixin lineAfter($height: mix(1px)) {
+    &::after {
+        content: "";
+        background-color: $color-gray-3;
+        width: 100%;
+        height: $height;
+        display: block;
+        margin: $pd-1 0;
+    }
+}
+
+@mixin newsLinks() {
+    color: $color-black;
+    transition: all 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+        color: $color-red-0;
+    }
+}
+
+@mixin newsLink($sizeFont) {
+    color: $color-black;
+    transition: all 0.3s;
+    text-decoration: none;
+    &:hover {
+        color: $color-red-0;
+        font-size: $sizeFont;
+    }
+}

@@ -1,0 +1,68 @@
+.cinemaListMovie {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    .list-group-item {
+        color: #495057 !important;
+        background-color: white !important;
+
+        opacity: 0.6;
+    }
+    .list-group-item.active {
+        opacity: 1;
+
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        background-color: white !important;
+    }
+    height: 650px;
+    overflow: hidden;
+
+    .CumRap,
+    .item-DetaildPage {
+        height: 650px;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 0.25rem;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            border-radius: 0.25rem;
+            background: #888;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    }
+    .LichChieuRap {
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        height: 650px;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 0.25rem;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            border-radius: 0.25rem;
+            background: #888;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    }
+}

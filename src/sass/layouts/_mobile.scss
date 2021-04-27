@@ -1,0 +1,26 @@
+.mobile-app {
+    // background-image: url("./img/backapp.jpg");
+    font-size: 12px;
+    width: 100%;
+    background-size: contain;
+    color: white;
+    h2 {
+        padding-top: 70px;
+        @media (max-width: 786px) {
+            font-size: 23px;
+        }
+    }
+    .container {
+        .row {
+            padding: 100px 40px;
+        }
+    }
+    .mobile {
+        width: 100%;
+        // background-image: url("./img/mobile.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 4%;
+        overflow: hidden;
+    }
+}

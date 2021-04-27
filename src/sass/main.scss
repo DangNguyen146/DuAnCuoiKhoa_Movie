@@ -1,7 +1,31 @@
-@import "./base/base.scss";
-@import "./components/components.scss";
-@import "./helper/helper.scss";
-@import "./layouts/layout.scss";
-@import "./pages/pages.scss";
-@import "./theme/theme.scss";
-@import "./vendor/vendor.scss";
+@import "./base/customize";
+@import "./base/reset";
+
+@import "./components/button";
+@import "./components/logo";
+@import "./layouts/loading";
+@import "./helper/mixin";
+@import "./helper/variables";
+@import "./pages/AccLogin";
+@import "./components/slider";
+@import "./layouts/navbar";
+@import "./components/propDownUser";
+@import "./components/slider";
+@import "./components/slick-theme-fix";
+@import "./layouts/listMoviePages";
+@import "./components//popupVideo";
+@import "./layouts/footer";
+@import "./layouts/mobile";
+@import "./layouts/cinemaListMovie";
+@import "./layouts/accordion";
+// @import "./components/screen";
+// @import "./components/rapChieu";
+// @import "./components/movieItem-main";
+// @import "./components/movieItem";
+html,
+body {
+    padding: 34px 0 0 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+        "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
