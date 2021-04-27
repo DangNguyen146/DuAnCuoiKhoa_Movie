@@ -23,13 +23,14 @@ export default class ListMovieItem extends Component {
             <p className="card-title d-none d-md-block">
               <b>{CutName(movie.tenPhim)}</b>
             </p>
-            <Button
-              className="btn text-light w-100"
+            <Link
+              to={`/detail/${movie.maPhim}`}
+              className="btn btn-redorange btn-block  shadow-none  border-0"
               variant="contained"
               color="secondary"
             >
               Chi tiết
-            </Button>
+            </Link>
           </div>
         </div>
       </div>

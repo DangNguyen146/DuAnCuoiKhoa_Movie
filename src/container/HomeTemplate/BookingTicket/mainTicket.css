@@ -1,0 +1,154 @@
+.getTicket {
+  height: 93.1vh;
+  width: 100%;
+}
+.getTicket .screen-getTicket {
+  background-image: url(./img/bg-screen.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: top;
+  height: 50px;
+}
+.getTicket .listGheDat {
+  height: 380px;
+  overflow: auto;
+}
+.getTicket .listGheDat::-webkit-scrollbar {
+  width: 5px;
+}
+.getTicket .listGheDat::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0.25rem;
+}
+.getTicket .listGheDat::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+  background: #888;
+}
+.getTicket .listGheDat::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.getTicket .container-fluit {
+  /* height: 100vh; */
+}
+
+.getTicket .container-fluit .getTicket-main .row .Img-getTicket {
+  position: relative;
+}
+
+.getTicket .container-fluit .getTicket-main .row .Img-getTicket .anh-getTicket {
+  position: absolute;
+  height: 93.1vh;
+  /* height: 100%; */
+  overflow: hidden;
+}
+
+.getTicket
+  .container-fluit
+  .getTicket-main
+  .row
+  .Img-getTicket
+  .anh-getTicket
+  img {
+  width: 100%;
+  filter: blur(6px);
+}
+
+.getTicket
+  .container-fluit
+  .getTicket-main
+  .row
+  .Img-getTicket
+  .color-overplay {
+  position: absolute;
+  width: 100%;
+  height: 93.1vh;
+  background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0.438));
+}
+
+.getTicket .container-fluit #five-countdown {
+  margin: 0 auto;
+  width: 50%;
+  border: 2px solid #313131;
+}
+
+.getTicket .container-fluit .getMobeyTicket {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  height: 93.1vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper > * {
+  padding: 20px;
+}
+
+.pages-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  background-image: url("./img/screen.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pages-main {
+  opacity: 0;
+}
+
+.pages-header,
+.pages-main {
+  overflow: hidden;
+}
+
+.pages-header {
+  position: relative;
+}
+
+.pages-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #000;
+  z-index: 99;
+  transform: scaleX(0);
+}
+
+.loaded .pages-header::after {
+  animation: scaleIn 1s ease-in 0.2s forwards;
+}
+
+.loaded .pages-main {
+  animation: fadeIn 1.3s ease-in 0.2s forwards;
+}
+
+@keyframes fadeIn {
+  60% {
+    opacity: 0;
+    height: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes slideIn {
+  100% {
+    transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=main.css.map */

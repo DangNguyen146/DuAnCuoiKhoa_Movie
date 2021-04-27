@@ -1110,7 +1110,8 @@ footer .img-social .row .row img:hover {
   background-color: white !important;
 }
 
-.cinemaListMovie .CumRap {
+.cinemaListMovie .CumRap,
+.cinemaListMovie .item-DetaildPage {
   height: 650px;
   overflow: auto;
   /* Track */
@@ -1118,21 +1119,25 @@ footer .img-social .row .row img:hover {
   /* Handle on hover */
 }
 
-.cinemaListMovie .CumRap::-webkit-scrollbar {
-  width: 10px;
+.cinemaListMovie .CumRap::-webkit-scrollbar,
+.cinemaListMovie .item-DetaildPage::-webkit-scrollbar {
+  width: 5px;
 }
 
-.cinemaListMovie .CumRap::-webkit-scrollbar-track {
+.cinemaListMovie .CumRap::-webkit-scrollbar-track,
+.cinemaListMovie .item-DetaildPage::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 0.25rem;
 }
 
-.cinemaListMovie .CumRap::-webkit-scrollbar-thumb {
+.cinemaListMovie .CumRap::-webkit-scrollbar-thumb,
+.cinemaListMovie .item-DetaildPage::-webkit-scrollbar-thumb {
   border-radius: 0.25rem;
   background: #888;
 }
 
-.cinemaListMovie .CumRap::-webkit-scrollbar-thumb:hover {
+.cinemaListMovie .CumRap::-webkit-scrollbar-thumb:hover,
+.cinemaListMovie .item-DetaildPage::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
@@ -1161,6 +1166,10 @@ footer .img-social .row .row img:hover {
 
 .cinemaListMovie .LichChieuRap::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.accordion .btn-link:hover {
+  text-decoration: none !important;
 }
 
 html,

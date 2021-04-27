@@ -13,7 +13,7 @@ class LichChieuRap extends Component {
     };
   }
   componentDidMount() {
-    const { maCumRap, danhSachRap, nameCinema } = this.props;
+    const { maCumRap, danhSachRap, nameCinema, maPhim } = this.props;
     this.props.fetchTTLCRCinema(nameCinema);
   }
   render() {

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class Footer extends Component {
   render() {
     return (
-      <footer className="wow animate__bounceInRight" data-wow-delay="0.3s">
+      <footer className="wow animate__fadeInDown" data-wow-delay="0.3s">
         <div className="container-fluid container-md">
           <div className="text-center text-md-left row">
             <div className="col-12 col-md-3">

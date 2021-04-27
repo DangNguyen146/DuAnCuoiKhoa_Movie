@@ -5,7 +5,7 @@ export default class Mobile extends Component {
   render() {
     return (
       <section
-        className="mobile-app wow animate__bounceInLeft "
+        className="mobile-app wow animate__fadeInDown "
         data-wow-delay="0.3s"
         style={{ backgroundImage: "url(./img/backapp.jpg)" }}
       >

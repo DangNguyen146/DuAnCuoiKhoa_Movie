@@ -2,6 +2,7 @@
     color: #fb543b !important;
     font-weight: 500 !important;
 }
+
 @mixin styleText($fs, $color, $fw) {
     font-size: $fs;
     color: $color;

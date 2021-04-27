@@ -49,7 +49,7 @@ class CumRap extends Component {
                 <div className="col-3">
                   <div
                     style={{
-                      height: "50.5px",
+                      height: "52.6px",
                       width: "100%",
                       backgroundColor: "#555",
                     }}
@@ -98,9 +98,9 @@ class CumRap extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-4 p-0">
+          <div className="col-4 px-0">
             <div
-              className="list-group rounded-0 CumRap"
+              className="list-group rounded-0 CumRap "
               id="list-tab"
               role="tablist"
             >

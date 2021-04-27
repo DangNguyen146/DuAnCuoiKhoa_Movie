@@ -10,7 +10,7 @@ export default class HomePage extends Component {
   componentDidMount() {
     const wow = new WOW({
       offset: 100,
-      mobile: true,
+      mobile: false,
       live: true,
     });
 

@@ -14,11 +14,13 @@
     }
     height: 650px;
     overflow: hidden;
-    .CumRap {
+
+    .CumRap,
+    .item-DetaildPage {
         height: 650px;
         overflow: auto;
         &::-webkit-scrollbar {
-            width: 10px;
+            width: 5px;
         }
 
         /* Track */

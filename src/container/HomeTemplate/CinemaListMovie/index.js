@@ -82,7 +82,7 @@ class CinemaListMovie extends Component {
       );
     };
     return (
-      <div className="container my-5 cinemaListMovie">
+      <div className="container my-5 cinemaListMovie px-0">
         <div className="row wow animate__fadeInDown m-0" data-wow-delay="0.3s">
           <div className="col-1 p-0">
             <div
