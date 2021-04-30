@@ -1,18 +1,7 @@
 import { DAT_GHE, HUY_GHE } from "./constant";
 
 const sateDefault = {
-  dangSachGheDangDat: [
-    // {
-    //   maGhe: 48841,
-    //   tenGhe: "01",
-    //   maRap: 460,
-    //   loaiGhe: "Thuong",
-    //   stt: "01",
-    //   giaVe: 90000,
-    //   daDat: true,
-    //   taiKhoanNguoiDat: "voanhhieu123@gmail.com",
-    // },
-  ],
+  dangSachGheDangDat: [],
 };
 const DatVeReducer = (state = sateDefault, action) => {
   switch (action.type) {

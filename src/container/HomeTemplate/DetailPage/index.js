@@ -7,6 +7,7 @@ import "./main.css";
 import { Button } from "@material-ui/core";
 import Footer from "../../../components/Footer";
 import TimeDetaild from "./TimeDetaild";
+import OpenPopupVideo from "../../../components/Slider/OpenPopupVideo";
 
 class DetailMovie extends Component {
   constructor(props) {
@@ -151,6 +152,11 @@ class DetailMovie extends Component {
                     src={data && data.hinhAnh}
                     alt=""
                   />
+                  <div className="popupVideo">
+                    <OpenPopupVideo
+                      id={data && data.trailer.slice(30, data.trailer.length)}
+                    />
+                  </div>
                 </div>
                 <div className="d-none d-lg-block col-lg-1" />
                 <div className="col-12 col-lg-7">

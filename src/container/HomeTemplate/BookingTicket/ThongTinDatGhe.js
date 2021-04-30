@@ -5,6 +5,7 @@ import { huyGeAction } from "./Modules/action";
 import { actDatVeApi } from "./moduls/aciton";
 import "./mainTicket.css";
 import { Button } from "@material-ui/core";
+import Loader from "../../../components/Loader";
 
 class ThongTinDatGhe extends Component {
   render() {
@@ -15,8 +16,14 @@ class ThongTinDatGhe extends Component {
       taiKhoanNguoiDung: this.props.userLoginReducer.taiKhoan,
     };
     const handleOnClick = () => {
-      console.log(this.props.userLoginReducer.accessToken);
-      this.props.fetchCreate(temp, this.props.userLoginReducer.accessToken);
+      if (temp.danhSachVe == null) alert("Chưa đạt vé");
+      else {
+        this.props.fetchCreate(temp, this.props.userLoginReducer.accessToken);
+      }
+    };
+    const buttonDatVe = () => {
+      const { loading } = this.props.DatVeReducer;
+      if (loading) return <Loader />;
     };
     return (
       <>
@@ -66,6 +73,7 @@ class ThongTinDatGhe extends Component {
         <Button className="btn btn-redorange w-100" onClick={handleOnClick}>
           Đặt vé
         </Button>
+        {buttonDatVe}
       </>
     );
   }
@@ -75,6 +83,7 @@ const mapStateToProps = (state) => {
   return {
     dangSachGheDangDat: state.DatVeReducer.dangSachGheDangDat,
     userLoginReducer: state.userLoginReducer.data,
+    DatVeReducer: state.DatVeReducer.loading,
   };
 };
 const mapDispatchToProps = (dispatch) => {

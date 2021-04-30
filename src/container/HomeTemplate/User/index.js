@@ -14,7 +14,10 @@ class User extends Component {
         <div className="profile mt-3">
           <div className="container">
             <div className="row">
-              <div className="col-12 col-md-4 shadow avatar-proflie rounded">
+              <div
+                className="col-12 col-md-4 shadow avatar-proflie rounded"
+                style={{ height: 358 }}
+              >
                 <div className="logo center text-center mt-4">
                   <h1>{data.hoTen.slice(0, 1)}</h1>
                 </div>

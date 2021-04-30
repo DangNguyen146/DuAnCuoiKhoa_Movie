@@ -76,7 +76,7 @@ class PhimSapChieu extends Component {
     }
     return (
       <div>
-        <div className="d-none d-lg-block wow animate__backInLeft" data-wow-delay="0.3s">
+        <div className="d-none d-lg-block wow animate__backInLeft" data-wow-delay="0.3s" >
           <Slider ref={c => (this.slider = c)} {...settings} s>
             {renderSlides(12)}
           </Slider>
@@ -89,7 +89,7 @@ class PhimSapChieu extends Component {
             </div>
           </div>
         </div>
-        <div className="d-none d-md-block d-lg-none">
+        <div className="d-none d-md-block d-lg-none" style={{ minHeight: 755.994 }}>
           <Slider ref={c => (this.slider = c)} {...settings} s>
             {renderSlides(8)}
           </Slider>

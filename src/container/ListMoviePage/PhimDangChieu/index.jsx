@@ -67,7 +67,7 @@ class PhimDangChieu extends Component {
       let temp1 = -resposive;
       return arr.map(() => (
         <div>
-          <div className="row mx-0">
+          <div className="row mx-0" >
             {this.renderHTML(temp1 += resposive, resposive)}
           </div>
         </div>
@@ -75,23 +75,23 @@ class PhimDangChieu extends Component {
     }
     return (
       <div>
-        <div className="d-none d-lg-block wow animate__fadeInDown" data-wow-delay="0.3s">
-          <Slider ref={c => (this.slider = c)} {...settings} s>
+        <div className="d-none d-lg-block wow animate__fadeInDown" style={{ minHeight: 755.994 }} data-wow-delay="0.3s" >
+          <Slider ref={c => (this.slider = c)} {...settings} s  >
             {renderSlides(12)}
           </Slider>
         </div>
-        <div className="d-none d-md-block d-lg-none">
-          <Slider ref={c => (this.slider = c)} {...settings} s>
+        <div className="d-none d-md-block d-lg-none" style={{ minHeight: 755.994 }}>
+          <Slider ref={c => (this.slider = c)} {...settings} s  >
             {renderSlides(8)}
           </Slider>
         </div>
-        <div className="d-block d-md-none">
-          <Slider ref={c => (this.slider = c)} {...settings} s>
+        <div className="d-block d-md-none" style={{ minHeight: 755.994 }}>
+          <Slider ref={c => (this.slider = c)} {...settings} s  >
             {renderSlides(4)}
           </Slider>
         </div>
-        <div className="btnSlick">
-          <div className="d-none d-lg-block btnLeft" onClick={this.previous}>
+        <div className="btnSlick" >
+          <div className="d-none d-lg-block btnLeft" onClick={this.previous} >
             <img src="./img/back-session.png" alt="" />
           </div>
           <div className=" d-none d-lg-block btnRight" onClick={this.next}>
