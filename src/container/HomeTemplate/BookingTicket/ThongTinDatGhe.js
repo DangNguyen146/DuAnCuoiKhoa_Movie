@@ -8,6 +8,7 @@ import { Button } from "@material-ui/core";
 import Loader from "../../../components/Loader";
 
 class ThongTinDatGhe extends Component {
+  componentDidMount() {}
   render() {
     const { thongTinPhim } = this.props;
     let temp = {

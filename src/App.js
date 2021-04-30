@@ -8,6 +8,7 @@ import AccUser from "./container/HomeTemplate/AccUser";
 import { connect } from "react-redux";
 import { USER_LOGIN_SUCCESS } from "./container/HomeTemplate/AccUser/Login/modules/constant";
 import { createAction } from "./container/HomeTemplate/AccUser/Login/modules/actionforLogin";
+import PageNotFound from "./container/PageNotFound";
 
 class App extends Component {
   render() {
@@ -27,7 +28,10 @@ class App extends Component {
     };
     return (
       <BrowserRouter>
-        <Switch>{showLayoutHome(routeHome)}</Switch>
+        <Switch>
+          {showLayoutHome(routeHome)}
+          <Route path="" component={PageNotFound} />
+        </Switch>
         <BackToTop />
       </BrowserRouter>
     );

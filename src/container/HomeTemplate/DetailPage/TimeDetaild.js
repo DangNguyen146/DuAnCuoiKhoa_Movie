@@ -1,5 +1,6 @@
 import { Button } from "@material-ui/core";
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 export default class TimeDetaild extends Component {
@@ -136,7 +137,7 @@ export default class TimeDetaild extends Component {
                         {itemTime.ngayChieuGioChieu.slice(0, 10) !== temp ? (
                           <div class="pl-0 col-12 w-100 text-left ">
                             <span>
-                              Xuất chiều ngày{" "}
+                              Xuất chiều ngày
                               {/* {itemTime.ngayChieuGioChieu.slice(0, 10)} */}
                               {(temp = itemTime.ngayChieuGioChieu.slice(0, 10))}
                             </span>
@@ -144,9 +145,14 @@ export default class TimeDetaild extends Component {
                         ) : (
                           false
                         )}
-                        <Button className="col-4 col-sm-3 col-md-2 w-75 btn border btn-outline-redorange text-redorange mb-3 mr-4">
-                          {itemTime.ngayChieuGioChieu.slice(12, 16)}
-                        </Button>
+                        <Link
+                          to={`/datve/${itemTime.maLichChieu}`}
+                          className="text-decoration-none"
+                        >
+                          <Button className="col-4 col-sm-3 col-md-2 w-75 btn border btn-outline-redorange text-redorange mb-3 mr-4">
+                            {itemTime.ngayChieuGioChieu.slice(12, 16)}
+                          </Button>
+                        </Link>
                       </>
                     );
                   })}
