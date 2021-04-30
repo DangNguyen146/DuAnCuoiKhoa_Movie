@@ -1,6 +1,9 @@
 .listMoviePage {
     position: relative;
     // padding: 3rem 0;
+    .slick-slider.slick-initialized {
+        min-height: 755.994px;
+    }
     .MuiAppBar-colorPrimary {
         color: $color-gray;
         background-color: #fff;

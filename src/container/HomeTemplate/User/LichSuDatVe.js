@@ -10,14 +10,13 @@ class LichSuDatVe extends Component {
   }
 
   renerSercond = (object) => {
-    return object.map((item) => {
+    return object.map((item, index) => {
       return (
-        <div className="col-8 col-md-10">
-          <h6 className=" mb-1">{item.tenHeThongRap}</h6>
-          <p className="text-dark mb-1" style={{ opacity: "0.7" }}>
-            {item.tenCumRap}
-          </p>
-        </div>
+        <>
+          <span className=" mb-1">
+            {item.maGhe} {index !== object.length - 1 ? "," : ""}
+          </span>
+        </>
       );
     });
   };
@@ -29,7 +28,7 @@ class LichSuDatVe extends Component {
       data.thongTinDatVe.map((item) => {
         return (
           <>
-            <div className="col-12">
+            <div className="col-12 mb-2">
               <div className="row">
                 <div className="col-4 col-md-3 col-lg-2">
                   <div
@@ -38,13 +37,18 @@ class LichSuDatVe extends Component {
                   ></div>
                 </div>
                 <div className="col-8 col-md-9 col-lg-10">
-                  <div className="row d-none d-md-block">
+                  <div className="row">
                     <div className="col-4 col-md-2">
                       <div className="bg-dark w-100 h-100"></div>
                     </div>
-                    {this.renerSercond(item.danhSachGhe)}
+                    <div className="col-12 font-weight-bold">
+                      {item.danhSachGhe[0].tenHeThongRap}
+                    </div>
+                    <div className="col-12">
+                      Danh sách ghế: {this.renerSercond(item.danhSachGhe)}
+                    </div>
                   </div>
-                  <p className="mb-3">Ngày đặt: {item.ngayDat}</p>
+                  <p className="mb-3">Ngày đặt: {item.ngayDat.slice(0, 10)}</p>
                   <p className="font-weight-bold text-redorange">
                     Tên phim: {item.tenPhim}
                   </p>

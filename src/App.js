@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import HomeTemplate from "./container/HomeTemplate";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { routeHome, routesAdmin } from "./router";
+import BackToTop from "./components/BackToTop";
 import AccUser from "./container/HomeTemplate/AccUser";
 import { connect } from "react-redux";
 import { USER_LOGIN_SUCCESS } from "./container/HomeTemplate/AccUser/Login/modules/constant";
@@ -27,6 +28,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>{showLayoutHome(routeHome)}</Switch>
+        <BackToTop />
       </BrowserRouter>
     );
   }
@@ -42,19 +44,3 @@ class App extends Component {
 }
 
 export default connect()(App);
-
-// const mapStateToProps = (state) => {
-//   return {
-//     loading: state.userLoginReducer.loading,
-//     err: state.userLoginReducer.err,
-//   };
-// };
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     fetchLogin: (user, histoty) => {
-//       dispatch(fetchLoginApi(user, histoty));
-//     },
-//   };
-// };
-// export default connect(mapStateToProps, mapDispatchToProps)(Login);

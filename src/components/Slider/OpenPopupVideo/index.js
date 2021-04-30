@@ -3,8 +3,8 @@ import React, { Component } from "react";
 import ModalVideo from "react-modal-video";
 
 export default class OpenPopupVideo extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       isOpen: false,
     };
@@ -17,7 +17,7 @@ export default class OpenPopupVideo extends Component {
   render() {
     const { id } = this.props;
     return (
-      <div>
+      <React.Fragment>
         <ModalVideo
           channel="youtube"
           isOpen={this.state.isOpen}
@@ -25,10 +25,14 @@ export default class OpenPopupVideo extends Component {
           youtube={{ mute: 1, autoplay: 1 }}
           onClose={() => this.setState({ isOpen: false })}
         />
-        <button className="play btn" onClick={this.openModal}>
-          <img src="./img/play-video.png" />
+        <button
+          className="play btn"
+          onClick={this.openModal}
+          style={{ transform: " translateY(-300%)" }}
+        >
+          <img src="../img/play-video.png" alt="" />
         </button>
-      </div>
+      </React.Fragment>
     );
   }
 }

@@ -25,7 +25,7 @@ export default class Slider extends Component {
               src="./img/lua-deu-gap-lua-dao-16105107337344.jpg"
               alt="First slide"
             />
-            <OpenPopupVideo id={"T36HGZagV5w"} />
+            {/* <OpenPopupVideo id={"T36HGZagV5w"} /> */}
           </div>
           <div className="carousel-item">
             <img
@@ -33,7 +33,7 @@ export default class Slider extends Component {
               src="./img/tazza-16137903733874.jpg"
               alt="Second slide"
             />
-            <OpenPopupVideo id={"gqcpChNYH10"} />
+            {/* <OpenPopupVideo id={"gqcpChNYH10"} /> */}
           </div>
         </div>
         <div className="first-child">

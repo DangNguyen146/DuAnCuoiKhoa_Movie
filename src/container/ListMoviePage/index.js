@@ -59,7 +59,10 @@ export default function ListMoviePage() {
   };
 
   return (
-    <div className="listMoviePage container p-0  ">
+    <div
+      className="listMoviePage container p-0  "
+      style={{ minHeight: 755.994 }}
+    >
       <div className={classes.root}>
         <AppBar position="static">
           <Tabs
@@ -72,13 +75,13 @@ export default function ListMoviePage() {
             <Tab label="Phim hot nhất" {...a11yProps(2)} />
           </Tabs>
         </AppBar>
-        <TabPanel value={value} index={0}>
+        <TabPanel value={value} index={0} style={{ minHeight: 755.994 }}>
           <PhimSapChieu />
         </TabPanel>
-        <TabPanel value={value} index={1}>
+        <TabPanel value={value} index={1} style={{ minHeight: 755.994 }}>
           <PhimDangChieu />
         </TabPanel>
-        <TabPanel value={value} index={2}>
+        <TabPanel value={value} index={2} style={{ minHeight: 755.994 }}>
           <PhimHotNhat />
         </TabPanel>
       </div>
