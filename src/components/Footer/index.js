@@ -3,7 +3,11 @@ import React, { Component } from "react";
 export default class Footer extends Component {
   render() {
     return (
-      <footer className="wow animate__fadeInDown" data-wow-delay="0.3s">
+      <footer
+        className="wow animate__fadeInDown"
+        data-wow-delay="0.3s"
+        id="LienHe"
+      >
         <div className="container-fluid container-md">
           <div className="text-center text-md-left row">
             <div className="col-12 col-md-3">
@@ -26,7 +30,7 @@ export default class Footer extends Component {
               </div>
             </div>
             <div className="d-none d-md-block col-md-1 px-2" />
-            <div className="d-none d-md-block col-md-4">
+            <div className="d-none d-md-block col-md-4" id="DoiTac">
               <div className="row">
                 <div className="p-0 col-12">
                   <div className="footer-content">

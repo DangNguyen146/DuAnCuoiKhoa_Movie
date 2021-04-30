@@ -4,6 +4,7 @@ import {
   USER_LOGIN_FAILED,
 } from "./constant";
 import Axios from "axios";
+import { Redirect } from "react-router";
 
 export const fetchLoginApi = (user, history) => {
   return (dispatch) => {
@@ -17,7 +18,12 @@ export const fetchLoginApi = (user, history) => {
         if (result.data.maLoaiNguoiDung === "KhachHang") {
           dispatch(actLoginSuccess(result.data));
           localStorage.setItem("userKH", JSON.stringify(result.data));
-          history.push("/");
+          if (localStorage.getItem("idDatVe") !== null) {
+            let temp = JSON.parse(localStorage.getItem("idDatVe"));
+            history.push("/datve/" + temp);
+          } else {
+            history.push("/");
+          }
         } else {
           return Promise.reject({
             response: { data: "Lỗi" },

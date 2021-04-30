@@ -200,11 +200,6 @@ class DetailMovie extends Component {
                   <div className="row mt-3">
                     <div className="col-6 col-md-3">
                       <Button type="button" className=" btn-redorange w-100">
-                        Xem trailer
-                      </Button>
-                    </div>
-                    <div className="col-6 col-md-3">
-                      <Button type="button" className=" btn-redorange w-100">
                         <i className="fa fa-ticket-alt" />
                         <span className="ml-1"> Mua vé</span>
                       </Button>

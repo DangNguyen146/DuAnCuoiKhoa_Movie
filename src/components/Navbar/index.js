@@ -45,15 +45,15 @@ export default class NavbarHome extends Component {
                   </li>
                   <hr />
                   <li className="nav-item">
-                    <a href="#">Liên hệ</a>
+                    <a href="#LienHe">Liên hệ</a>
                   </li>
                   <hr />
                   <li className="nav-item">
-                    <a href="#">Tin tức</a>
+                    <a href="#DoiTac">Tin tức</a>
                   </li>
                   <hr />
                   <li className="nav-item">
-                    <a href="#">Ứng dụng</a>
+                    <a href="#DoiTac">Ứng dụng</a>
                   </li>
                   <hr />
                   <li className="nav-item">
@@ -85,17 +85,17 @@ export default class NavbarHome extends Component {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#LienHe">
                   Liên hệ
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#DoiTac">
                   Tin tức
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#DoiTac">
                   Ứng dụng
                 </a>
               </li>

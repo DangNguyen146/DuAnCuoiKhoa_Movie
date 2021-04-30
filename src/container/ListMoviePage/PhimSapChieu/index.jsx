@@ -76,34 +76,14 @@ class PhimSapChieu extends Component {
     }
     return (
       <div>
-        <div className="d-none d-lg-block wow animate__backInLeft" data-wow-delay="0.3s" >
-          <Slider ref={c => (this.slider = c)} {...settings} s>
+        <div className="wow animate__backInLeft" data-wow-delay="0.3s" >
+          <Slider ref={c => (this.slider = c)} {...settings} s className="d-none d-lg-block">
             {renderSlides(12)}
           </Slider>
-          <div className="btnSlick">
-            <div className="d-none d-lg-block btnLeft" onClick={this.previous}>
-              <img src="./img/back-session.png" alt="" />
-            </div>
-            <div className=" d-none d-lg-block btnRight" onClick={this.next}>
-              <img src="./img/next-session.png" alt="" />
-            </div>
-          </div>
-        </div>
-        <div className="d-none d-md-block d-lg-none" style={{ minHeight: 755.994 }}>
-          <Slider ref={c => (this.slider = c)} {...settings} s>
+          <Slider ref={c => (this.slider = c)} {...settings} s className="d-none d-md-block d-lg-none">
             {renderSlides(8)}
           </Slider>
-          <div className="btnSlick">
-            <div className="d-none d-lg-block btnLeft" onClick={this.previous}>
-              <img src="./img/back-session.png" alt="" />
-            </div>
-            <div className=" d-none d-lg-block btnRight" onClick={this.next}>
-              <img src="./img/next-session.png" alt="" />
-            </div>
-          </div>
-        </div>
-        <div className="d-block d-md-none">
-          <Slider ref={c => (this.slider = c)} {...settings} s>
+          <Slider ref={c => (this.slider = c)} {...settings} s className="d-block d-md-none">
             {renderSlides(4)}
           </Slider>
           <div className="btnSlick">
