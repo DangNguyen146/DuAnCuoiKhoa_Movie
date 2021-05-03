@@ -18,7 +18,6 @@ import UserProfilePage from "../container/AdminTemplate/UserProfile";
 import UpdateMoviePage from "../container/AdminTemplate/MoviePage/UpdateMoviePage";
 import ListCinemaPage from "../container/AdminTemplate/CinemaPage/ListCinemaPage";
 
-
 const routeHome = [
   {
     path: "/",
@@ -85,7 +84,6 @@ const routesAdmin = [
     component: AddTicketPage,
     exact: false,
   },
-
 
   {
     path: "/search-user",
