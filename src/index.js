@@ -12,6 +12,30 @@ import "./../node_modules/react-modal-video/css/modal-video.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "animate.css/animate.min.css";
+import "ajax/lib/ajax.js";
+import "fontawesome-4.7/css/font-awesome.min.css";
+import "fontawesome-4.7/css/font-awesome.css";
+
+
+// import "./assets/styles/adminAssets/css/main.css";
+// import "./assets/styles/adminAssets/css/util.css";
+// import "./assets/styles/adminAssets/css/style.css";
+// import "./assets/styles/adminAssets/vendors/css/vendor.bundle.base.css";
+// import "./assets/styles/adminAssets/vendors/mdi/css/materialdesignicons.min.css";
+// // import "./assets/styles/adminAssets/css/calendar.css";
+// import "./assets/styles/adminAssets/css/movie-style.css";
+// import "./assets/styles/adminAssets/css/modal.css";
+// import "./assets/styles/adminAssets/css/userProfile.css";
+// import "./assets/styles/adminAssets/css/paper-dashboard.css";
+
+// import "css-loader/dist/cjs.js";
+
+import "./assets/styles/adminAssets/js/dashboard.js";
+import "./assets/styles/adminAssets/js/todolist.js";
+import "./assets/styles/adminAssets/js/pages.js";
+import "./assets/styles/adminAssets/js/movie.js";
+ import "./assets/styles/adminAssets/js/userProfile.js";
+
 
 import "./css/main.css";
 // import "./sass/main.scss";

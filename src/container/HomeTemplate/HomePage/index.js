@@ -18,7 +18,7 @@ export default class HomePage extends Component {
   }
   render() {
     return (
-      <div>
+      <div style={{paddingTop: 55}}>
         <Slider />
         <ListMoviePage />
         <div className="d-none d-md-block">
