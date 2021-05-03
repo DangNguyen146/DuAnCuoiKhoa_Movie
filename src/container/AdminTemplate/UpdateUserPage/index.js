@@ -27,7 +27,7 @@ class UpdateUser extends Component {
             // taiKhoan: taiKhoan,
             [name]: value,
         }, () => {
-            console.log("handOnChange update user page: ", this.state);
+            // console.log("handOnChange update user page: ", this.state);
         });
     };
 
@@ -37,7 +37,7 @@ class UpdateUser extends Component {
         const { currentPage } = JSON.parse(listUserFromLocal);
         const { err } = this.props;
         e.preventDefault();
-        console.log("this.state.userUpdate: ", this.state)
+        // console.log("this.state.userUpdate: ", this.state)
         this.props.fectUpdateUser(this.state);
 
         if (!err) {

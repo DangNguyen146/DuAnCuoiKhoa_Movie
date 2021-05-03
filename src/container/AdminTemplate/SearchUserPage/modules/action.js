@@ -6,17 +6,17 @@ import {
 
 import Axios from "axios";
 
-export const actListMovieApi = (keyword) => {
+export const fetchSearchUserApi = (keyword) => {
   return (dispatch) => {
     dispatch(actSearchUserRequest());
     Axios({
       url:
-        `https://movie0706.cybersoft.edu.vn/api/QuanLyNguoiDung/TimKiemNguoiDung?MaNhom=GP01&tuKhoa=${keyword}`,
+        `https://movie0706.cybersoft.edu.vn/api/QuanLyNguoiDung/TimKiemNguoiDungPhanTrang?MaNhom=GP01&tuKhoa=${keyword}&soTrang=1&soPhanTuTrenTrang=10`,
       method: "GET",
     })
       .then((result) => {
         dispatch(actSearchUserSuccess(result.data));
-        localStorage.setItem("SearchUserByAccount", JSON.stringify(result.data));
+        // localStorage.setItem("SearchUserByAccount", JSON.stringify(result.data));
       })
       .catch((err) => {
         dispatch(actSearchUserFailed(err));

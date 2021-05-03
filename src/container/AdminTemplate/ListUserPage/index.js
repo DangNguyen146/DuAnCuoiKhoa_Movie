@@ -8,6 +8,8 @@ import ReactPagination from '../../../components/Pagination';
 import { fetchDeleteUserApi } from '../DeleteUserPage/modules/action';
 
 import UpdateUser from '../UpdateUserPage';
+import { fetchSearchUserApi } from '../SearchUserPage/modules/action';
+import SearchUser from '../SearchUserPage';
 
 // import { useSelector, useDispatch } from 'react-redux';
 // const error = useSelector(state => state.errorReducer.error);
@@ -46,7 +48,7 @@ class listUserPage extends Component {
             items,
             totalCount,
         }, () => {
-            console.log(this.state.currentPage, this.state.totalPages, this.state.count, this.state.items);
+            // console.log(this.state.currentPage, this.state.totalPages, this.state.count, this.state.items);
         });
 
     }
@@ -137,7 +139,7 @@ class listUserPage extends Component {
         const { updateErr } = this.props;
         if (updateErr) {
             return <div className="alert alert-danger">{updateErr.response.data}</div>;
-        } 
+        }
     };
 
 
@@ -153,7 +155,29 @@ class listUserPage extends Component {
         );
     };
 
+    handOnChangeSearch = (e) => {
+        const { name, value } = e.target;
+
+        this.props.fetchSearchUser(value);
+        // this.setState({
+        //     [name]: value,
+        // });
+    }
+
+    renderUserSearch = () => {
+        const { dataSearch, loadingSearch } = this.props;
+        if (loadingSearch) return <Loader />;
+        return (
+            dataSearch &&
+            dataSearch.items.map((item) => {
+                return <SearchUser key={item.taiKhoan} userSearch={item} getUserAccount={this.getUserAccount} />;
+            })
+        );
+    }
+
     render() {
+        const { dataSearch } = this.props;
+        // console.log("data search: ", dataSearch);
         return (
             <>
                 <div className="container">
@@ -166,7 +190,10 @@ class listUserPage extends Component {
                                 <div className="row">
                                     <div className="col-sm-7">
                                         <div className="input-group rounded">
-                                            <input type="search" className="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                                            <input type="search" className="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon"
+                                                name="taiKhoan"
+                                                onChange={this.handOnChangeSearch}
+                                            />
                                             <span className="input-group-text border-0" id="search-addon">
                                                 <i className="mdi mdi-magnify" />
                                             </span>
@@ -191,12 +218,37 @@ class listUserPage extends Component {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {this.renderHTML()}
+                                    {this.props.dataSearch ?
+                                        <>   {this.props.dataSearch.count != "0" ?
+                                            <>  {this.renderUserSearch()}  </> : <>    {this.renderHTML()} </>
+                                        }
+                                        </>
+                                        : <>  {this.renderHTML()} </>
+                                    }
                                 </tbody>
                             </table>
                             <div className="clearfix">
-                                <div className="hint-text">Showing <b>{this.state.count}</b> out of <b>{this.state.totalCount}</b> entries</div>
-                                {this.renderPagination()}
+                                <div className="hint-text">Showing
+                                {this.props.dataSearch ?
+                                        <>   {this.props.dataSearch.count != "0" ?
+                                            <><b>{this.props.dataSearch.count}</b> out of <b>{this.props.dataSearch.totalCount}</b>    </> : <>    <b>{this.state.count}</b> out of <b>{this.state.totalCount}</b>  </>
+                                        }
+                                        </>
+                                        : <>    <b>{this.state.count}</b> out of <b>{this.state.totalCount}</b> </>
+                                    }
+                                    {/* <b>{this.state.count}</b> out of <b>{this.state.totalCount}</b> */}
+
+                                entries
+                                </div>
+
+                                {this.props.dataSearch ?
+                                    <>   {this.props.dataSearch.count != "0" ?
+                                        <>   </> : <>  {this.renderPagination()} </>
+                                    }
+                                    </>
+                                    : <>  {this.renderPagination()} </>
+                                }
+                                {/* {this.renderPagination()} */}
                             </div>
                         </div>
                     </div>
@@ -206,7 +258,7 @@ class listUserPage extends Component {
                     <div className="modal-dialog modal-xl" role="document">
                         <div className="modal-content">
                             <div className="modal-header">
-                              
+
                                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                 </button>
@@ -229,7 +281,7 @@ class listUserPage extends Component {
                                     <div className="Scriptcontent">
                                         {/* partial:index.partial.html */}
                                         {this.renderNoti()}
-                                      
+
 
                                     </div>
                                 </div>
@@ -250,6 +302,9 @@ const mapStateToProps = (state) => {
         data: state.listUserReducer.data,
         err: state.deleteUserReducer.err,
         updateErr: state.updateUserReducer.err,
+
+        dataSearch: state.searchUserReducer.data,
+        loadingSearch: state.searchUserReducer.loading,
     };
 };
 
@@ -264,6 +319,10 @@ const mapDispatchToProps = (dispatch) => {
         // fectUpdateUser: (user) => {
         //     dispatch(fetchUpdateUserApi(user));
         // }
+        fetchSearchUser: (keyword) => {
+            dispatch(fetchSearchUserApi(keyword));
+        }
+
     };
 };
 
