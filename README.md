@@ -2,5 +2,5 @@
 
 ### Front-end developer
 
-Nguyễn Khải Đăng
+Nguyễn Khải Đăng</br>
 Nguyễn Bá Trọng
