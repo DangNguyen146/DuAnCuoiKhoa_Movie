@@ -6,6 +6,7 @@ import { actDatVeApi } from "./moduls/aciton";
 import "./mainTicket.css";
 import { Button } from "@material-ui/core";
 import Loader from "../../../components/Loader";
+import "./getMoney.css";
 
 class ThongTinDatGhe extends Component {
   componentDidMount() {}
@@ -63,18 +64,20 @@ class ThongTinDatGhe extends Component {
             </tbody>
           </table>
         </div>
-        <h4 className="text-redorange text-center">Tổng số tiền</h4>
-        <h2 className="text-redorange text-center font-weight-bold">
-          {this.props.dangSachGheDangDat
-            .reduce((tongTien, gheDangDat, index) => {
-              return (tongTien += gheDangDat.giaVe);
-            }, 0)
-            .toLocaleString()}
-        </h2>
-        <Button className="btn btn-redorange w-100" onClick={handleOnClick}>
-          Đặt vé
-        </Button>
-        {buttonDatVe}
+        <div className="getMoney w-100 pb-5">
+          <h4 className="text-redorange text-center">Tổng số tiền</h4>
+          <h2 className="text-redorange text-center font-weight-bold">
+            {this.props.dangSachGheDangDat
+              .reduce((tongTien, gheDangDat, index) => {
+                return (tongTien += gheDangDat.giaVe);
+              }, 0)
+              .toLocaleString()}
+          </h2>
+          <Button className="btn btn-redorange w-100" onClick={handleOnClick}>
+            Đặt vé
+          </Button>
+          {buttonDatVe}
+        </div>
       </>
     );
   }
