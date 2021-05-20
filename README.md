@@ -3,3 +3,4 @@
 ### Front-end developer
 
 Nguyễn Khải Đăng
+Nguyễn Bá Trọng
