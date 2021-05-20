@@ -11,8 +11,6 @@ import UpdateUser from '../UpdateUserPage';
 import { fetchSearchUserApi } from '../SearchUserPage/modules/action';
 import SearchUser from '../SearchUserPage';
 
-// import { useSelector, useDispatch } from 'react-redux';
-// const error = useSelector(state => state.errorReducer.error);
 
 class listUserPage extends Component {
     constructor(props) {
@@ -47,8 +45,6 @@ class listUserPage extends Component {
             count,
             items,
             totalCount,
-        }, () => {
-            // console.log(this.state.currentPage, this.state.totalPages, this.state.count, this.state.items);
         });
 
     }
@@ -77,7 +73,7 @@ class listUserPage extends Component {
 
 
     getUserAccount = (userAccount) => {
-        // console.log("userInfor form edit: ", userAccount);
+      
         const { taiKhoan, hoTen, email, matKhau, maLoaiNguoiDung, soDt, maNhom } = userAccount;
 
         this.setState({
@@ -92,8 +88,6 @@ class listUserPage extends Component {
                 maNhom,
             },
 
-        }, () => {
-            console.log("userUpdate form edit : ", this.state.userUpdate);
         });
     }
 
@@ -159,9 +153,7 @@ class listUserPage extends Component {
         const { name, value } = e.target;
 
         this.props.fetchSearchUser(value);
-        // this.setState({
-        //     [name]: value,
-        // });
+       
     }
 
     renderUserSearch = () => {
@@ -186,7 +178,7 @@ class listUserPage extends Component {
                     </div>
                     <div className="table-responsive">
                         <div className="table-wrapper">
-                            <div className="table-title">
+                            <div className="table-title table-movie">
                                 <div className="row">
                                     <div className="col-sm-7">
                                         <div className="input-group rounded">
@@ -194,9 +186,7 @@ class listUserPage extends Component {
                                                 name="taiKhoan"
                                                 onChange={this.handOnChangeSearch}
                                             />
-                                            <span className="input-group-text border-0" id="search-addon">
-                                                <i className="mdi mdi-magnify" />
-                                            </span>
+                                            
                                         </div>
                                     </div>
                                     <div className="col-sm-5">

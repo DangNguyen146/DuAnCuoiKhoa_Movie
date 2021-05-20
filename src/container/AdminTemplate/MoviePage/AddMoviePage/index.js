@@ -27,8 +27,6 @@ class AddMoviePage extends Component {
     this.setState({
       // taiKhoan: taiKhoan,
       [name]: newDate,
-    }, () => {
-      console.log("handOnChange update movie new date: ", this.state.ngayKhoiChieu);
     });
   }
 
@@ -36,8 +34,6 @@ class AddMoviePage extends Component {
     const { name, value } = e.target;
     this.setState({
       [name]: value,
-    }, () => {
-      console.log("add movie: ", this.state);
     });
   };
 
@@ -51,9 +47,17 @@ class AddMoviePage extends Component {
     return (
      
       <div className="container" >
-        <h2 style={{ textAlign: 'center'}}>Thêm phim mới</h2>
+       
         <div className="row p-5" style={{ justifyContent: 'center' }}>
-          <div className="col-sm-7" style={{ border: '1px solid black' }}>
+          <div className="col-sm-7 addUser" >
+          <div className="table-title ">
+              <div className="row">
+                <div className="col">
+                  <h2 style={{ color: 'white', textAlign: 'center' }}>Thêm phim mới</h2>
+                </div>
+
+              </div>
+            </div>
             <form onSubmit={this.addMovie} style={{ padding: 10 }}>
               <div className="form-group">
                 <label htmlFor="fullName">Mã phim</label>
@@ -91,7 +95,7 @@ class AddMoviePage extends Component {
                 />
               </div>
               <div className="form-group ">
-                <label htmlFor="birthday">Lịch chiếu mới</label>
+                <label htmlFor="birthday">Ngày khởi chiếu</label>
                 <input type="date" className="form-control" id="birthday"
                   name="ngayKhoiChieu"
                   onChange={this.hanldeOnchangeDate}
@@ -126,7 +130,7 @@ class AddMoviePage extends Component {
                 </select>
               </div>
               <div className="form-group">
-                <div className="col">
+                <div className="col btnAddUser">
                   <button type="submit" className="btn btn-primary btn-block">Thêm phim</button>
                 </div>
               </div>

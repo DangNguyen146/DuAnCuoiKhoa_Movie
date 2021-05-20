@@ -28,8 +28,6 @@ class UpdateMovie extends Component {
         this.setState({
             // taiKhoan: taiKhoan,
             [name]: newDate,
-        }, () => {
-            // console.log("handOnChange update movie new date: ", this.state.ngayKhoiChieu);
         });
     }
     hanldeOnchange = (e) => {
@@ -37,8 +35,6 @@ class UpdateMovie extends Component {
         this.setState({
             // taiKhoan: taiKhoan,
             [name]: value,
-        }, () => {
-            // console.log("handOnChange update movie page: ", this.state);
         });
     };
 
@@ -46,16 +42,9 @@ class UpdateMovie extends Component {
 
         const listMovieFromLocal = localStorage.getItem("ListMovie");
         const { currentPage } = JSON.parse(listMovieFromLocal);
-        // console.log("currentPage: ", currentPage);
-        // const { err } = this.props;
         e.preventDefault();
-        // console.log("this.state.movieUpdate: ", this.state);
         this.props.fectUpdateMovie(this.state);
-
-        // if (!err) {
         this.props.fetchListMovie(currentPage);
-
-        // };
     }
 
 

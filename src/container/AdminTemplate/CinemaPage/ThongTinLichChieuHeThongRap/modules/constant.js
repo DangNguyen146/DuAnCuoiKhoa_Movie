@@ -1,0 +1,6 @@
+export const GROUP_SYSTEM_CINEMA_REQUEST = "groupSystemCinemaReducer/GROUP_SYSTEM_CINEMA_REQUEST";
+export const GROUP_SYSTEM_CINEMA_SUCCESS = "groupSystemCinemaReducer/GROUP_SYSTEM_CINEMA_SUCCESS";
+export const GROUP_SYSTEM_CINEMA_FAILED = "groupSystemCinemaReducer/GROUP_SYSTEM_CINEMA_FAILED";
+
+
+

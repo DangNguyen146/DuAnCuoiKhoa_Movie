@@ -14,8 +14,6 @@ class Cinema extends Component {
                 <td>{cinema.maHeThongRap}</td>
                 <td>{cinema.tenHeThongRap}</td>
                  <td>{cinema.biDanh}</td> 
-            
-
                <td><img src={cinema.logo}/></td> 
       
             </tr>

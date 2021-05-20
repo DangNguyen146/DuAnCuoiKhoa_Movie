@@ -17,7 +17,9 @@ import ListMoviePage from "../container/AdminTemplate/MoviePage/ListMoviePage";
 import UserProfilePage from "../container/AdminTemplate/UserProfile";
 import UpdateMoviePage from "../container/AdminTemplate/MoviePage/UpdateMoviePage";
 import ListCinemaPage from "../container/AdminTemplate/CinemaPage/ListCinemaPage";
-
+import DanhSachPhongVe from "../container/AdminTemplate/TicketPage/DanhSachPhongVe";
+import CinemaInfor from "../container/AdminTemplate/TicketPage/LayThongTinLichChieu";
+import MovieInforPage from "../container/AdminTemplate/MoviePage/MovieInforPage";
 
 const routeHome = [
   {
@@ -113,6 +115,22 @@ const routesAdmin = [
   {
     path: "/list-cinema",
     component: ListCinemaPage,
+    exact: false,
+  },
+
+  {
+    path: "/list-ticket",
+    component: DanhSachPhongVe,
+    exact: false,
+  },
+  {
+    path: "/cinema-infor",
+    component: CinemaInfor,
+    exact: false,
+  },
+  {
+    path: "/movie-infor/:id",
+    component: MovieInforPage,
     exact: false,
   },
 ];

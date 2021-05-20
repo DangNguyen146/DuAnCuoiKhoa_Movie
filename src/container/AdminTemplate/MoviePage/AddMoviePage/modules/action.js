@@ -22,7 +22,7 @@ export const fetchAddMovieApi = (movie) => {
       },
     })
       .then((result) => {
-        console.log(result.data);
+      
         dispatch(actAddMovieSuccess(result.data));
       })
       .catch((err) => {

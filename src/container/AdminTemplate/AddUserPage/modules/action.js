@@ -22,7 +22,7 @@ export const fetchAddUserApi = (user) => {
       },
     })
       .then((result) => {
-        console.log(result.data);
+       
         dispatch(actAddUserSuccess(result.data));
       })
       .catch((err) => {

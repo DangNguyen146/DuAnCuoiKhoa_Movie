@@ -98,10 +98,10 @@ class ListMoviePage extends Component {
         )
     }
 
-    renderModalInfor = () => {
-        let { movieInfor } = this.state;
-        return <MovieInfor key={movieInfor.maPhim} movieInfor={movieInfor} />;
-    }
+    // renderModalInfor = () => {
+    //     let { movieInfor } = this.state;
+    //     return <MovieInfor key={movieInfor.maPhim} movieInfor={movieInfor} />;
+    // }
 
     renderModalUpdate = () => {
         let { movieUpdate } = this.state;
@@ -163,7 +163,7 @@ class ListMoviePage extends Component {
             <div className="container">
                 <div className="table-responsive">
                     <div className="table-wrapper">
-                        <div className="table-title">
+                        <div className="table-title table-movie">
                             <div className="row">
                                 <div className="col">
                                     <h2 style={{color: 'white'}}>Quản lý phim</h2>
@@ -207,7 +207,7 @@ class ListMoviePage extends Component {
                                 </button>
                             </div>
                             <div className="modal-body">
-                                {this.renderModalInfor()}
+                                {/* {this.renderModalInfor()} */}
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -34,7 +34,9 @@ import "./assets/styles/adminAssets/js/dashboard.js";
 import "./assets/styles/adminAssets/js/todolist.js";
 import "./assets/styles/adminAssets/js/pages.js";
 import "./assets/styles/adminAssets/js/movie.js";
- import "./assets/styles/adminAssets/js/userProfile.js";
+import "./assets/styles/adminAssets/js/userProfile.js";
+
+import "./../node_modules/datatables.net/js/jquery.dataTables.js";
 
 
 import "./css/main.css";

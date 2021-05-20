@@ -29,9 +29,9 @@ class Movie extends Component {
         <td>{movie.tenPhim}</td>
         {/* <td>{movie.moTa}</td> */}
         <td>{dateC}</td>
-        <td>{movie.danhGia}</td>
+        <td>{movie.danhGia}/10</td>
         <td>
-          <a type="button" className="settings" title="Xem chi tiết" data-toggle="modal" data-target="#movieEdit" onClick={() => { this.props.getMovieCode(movie) }}><i className="mdi mdi-eye"></i></a>
+          <NavLink to={`/movie-infor/${movie.maPhim}`} type="button" className="settings" title="Xem chi tiết" data-toggle="modal" data-target="#movieEdit" onClick={() => { this.props.getMovieCode(movie) }}><i className="mdi mdi-eye"></i></NavLink>
           <a type="button" className="settings" title="Cập nhật phim" data-toggle="modal" data-target="#updateMovie" onClick={() => { this.props.getMovieCode(movie) }}><i className="mdi mdi-pencil"></i></a>
           <a type="button" className="settings" title="Tạo lịch chiếu" data-toggle="modal" data-target="#addTicket"><i className="mdi mdi-calendar-clock" onClick={() =>{ this.props.getMovieCode(movie) }}></i></a>
           <a type="button" className="delete" title="Xóa" data-toggle="modal" data-target="#modalMovieDelete"  onClick={() => { this.deleteMovie(movie.maPhim) }}><i className="mdi mdi-delete"></i></a>

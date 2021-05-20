@@ -5,9 +5,17 @@ class UserProfilePage extends Component {
 
         return (
             <>
-                <div className="container" >
-                    <h2>Thông tin cá nhân</h2>
-                    <div className="row p-5" style={{ border: '1px solid black' }}>
+                <div className="container userInfor" >
+                 
+                    <div className="table-title">
+                            <div className="row">
+                                <div className="col">
+                                    <h2 style={{ color: 'white',textAlign: 'center' }}>Thông tin cá nhân</h2>
+                                </div>
+
+                            </div>
+                        </div>
+                    <div className="row " style={{ backgroundColor: 'white' }}>
                         <div className="col-sm-5" style={{ textAlign: 'center' }}>
                             <img src={process.env.PUBLIC_URL + '/img/user.png'} alt="" style={{ width: 250, height: 250 }} />
                             <div >

@@ -27,10 +27,7 @@ class AddTicketPage extends Component {
     const { name, value } = e.target;
     this.setState({
       [name]: value,
-    }
-      , () => {
-        console.log("handle change ticket: ", this.state);
-      });
+    });
   };
 
   addTicket = (e) => {
@@ -64,7 +61,6 @@ class AddTicketPage extends Component {
   hanldeOnchangeDate = (e) => {
     const { name, value } = e.target;
     const input = value;
-    console.log("value: ", value);
     const [year, month, day] = input.split('-');
     const newDate = `${day}/${month}/${year}`;
 
@@ -72,8 +68,6 @@ class AddTicketPage extends Component {
     this.setState({
       // taiKhoan: taiKhoan,
       [name]: newDate,
-    }, () => {
-      console.log("handOnChange update movie new date: ", this.state.ngayChieuGioChieu);
     });
   }
 
@@ -81,7 +75,6 @@ class AddTicketPage extends Component {
 
   renderMaRap = () => {
     const { loadingGroupCinema, dataGroupCinema } = this.props;
-    console.log("dataGroupCinema: ", dataGroupCinema);
     if (loadingGroupCinema) return <Loader />;
     return (
       dataGroupCinema &&

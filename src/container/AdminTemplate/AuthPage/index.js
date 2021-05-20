@@ -5,14 +5,7 @@ import Loader from "./../../../components/Loader";
 import { fetchListUserApi } from "../ListUserPage/modules/action";
 
  import  "./../../../assets/styles/adminAssets/css/main.css";
-// import  "./../../../assets/styles/adminAssets/css/util.css";
-// import  "./../../../assets/styles/adminAssets/css/style.css";
-// import  "./../../../assets/styles/adminAssets/css/movie-style.css";
-// import  "./../../../assets/styles/adminAssets/css/modal.css";
-// import  "./../../../assets/styles/adminAssets/css/userProfile.css";
-// import  "./../../../assets/styles/adminAssets/css/paper-dashboard.css";
-// import  "./../../../assets/styles/adminAssets/vendors/css/vendor.bundle.base.css";
-// import  "./../../../assets/styles/adminAssets/vendors/mdi/css/materialdesignicons.min.css";
+
 
 class AuthPage extends Component {
   constructor(props) {

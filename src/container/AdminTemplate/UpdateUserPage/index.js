@@ -26,8 +26,6 @@ class UpdateUser extends Component {
         this.setState({
             // taiKhoan: taiKhoan,
             [name]: value,
-        }, () => {
-            // console.log("handOnChange update user page: ", this.state);
         });
     };
 
@@ -50,8 +48,10 @@ class UpdateUser extends Component {
         const { userUpdate } = this.props;
         return (
             <div className="container" >
-                <h2 style={{ textAlign: 'center' }}>Cập nhật thông tin</h2>
-                <div className="row p-5" style={{ border: '1px solid black' }}>
+                <div className="user-title">
+                    <h2 >Cập nhật thông tin</h2>
+                </div>
+                <div className="row p-5" >
                     <div className="col-sm-5" style={{ textAlign: 'center' }}>
                         <img src={process.env.PUBLIC_URL + '/img/user.png'} alt="" style={{ width: 250, height: 250 }} />
                         <div >
@@ -60,7 +60,7 @@ class UpdateUser extends Component {
                             </span>
                             <br></br>
                             <span>
-                                {userUpdate.maLoaiNguoiDung==='QuanTri' ? "Quản Trị Viên" : "Khách Hàng"}
+                                {userUpdate.maLoaiNguoiDung === 'QuanTri' ? "Quản Trị Viên" : "Khách Hàng"}
                             </span>
                         </div>
                     </div>
@@ -69,44 +69,44 @@ class UpdateUser extends Component {
                             <div className="form-group">
                                 <label htmlFor="fullName">Tài khoản</label>
                                 <input type="text" className="form-control" id="fullName" defaultValue={userUpdate.taiKhoan}
-                                 name="taiKhoan"
-                                 onChange={this.hanldeOnchange}/>
+                                    name="taiKhoan"
+                                    onChange={this.hanldeOnchange} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="fullName">Họ tên</label>
-                                <input type="text" className="form-control" id="fullName"  defaultValue={userUpdate.hoTen}
-                                 name="hoTen"
-                                 onChange={this.hanldeOnchange}/>
+                                <input type="text" className="form-control" id="fullName" defaultValue={userUpdate.hoTen}
+                                    name="hoTen"
+                                    onChange={this.hanldeOnchange} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="pass">Mật khẩu</label>
-                                <input type="password" className="form-control" id="pass"  defaultValue={userUpdate.matKhau}  
-                                name="matKhau"
-                         onChange={this.hanldeOnchange}/>
+                                <input type="password" className="form-control" id="pass" defaultValue={userUpdate.matKhau}
+                                    name="matKhau"
+                                    onChange={this.hanldeOnchange} />
                             </div>
 
                             <div className="form-group">
                                 <label htmlFor="email">Email</label>
-                                <input type="email" className="form-control" id="email"  defaultValue={userUpdate.email}
-                                 name="email"
-                                 onChange={this.hanldeOnchange}/>
+                                <input type="email" className="form-control" id="email" defaultValue={userUpdate.email}
+                                    name="email"
+                                    onChange={this.hanldeOnchange} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="fullName">Số điện thoại</label>
-                                <input type="text" className="form-control" id="fullName"  defaultValue={userUpdate.soDt}
-                                 name="soDt"
-                                 onChange={this.hanldeOnchange}/>
+                                <input type="text" className="form-control" id="fullName" defaultValue={userUpdate.soDt}
+                                    name="soDt"
+                                    onChange={this.hanldeOnchange} />
                             </div>
 
 
                             <div className="form-group">
                                 <label htmlFor="fullName">Loại người dùng</label>
-                                <input type="text" className="form-control" id="fullName"  defaultValue={userUpdate.maLoaiNguoiDung}
-                                 name="maLoaiNguoiDung"
-                                 onChange={this.hanldeOnchange}/>
+                                <input type="text" className="form-control" id="fullName" defaultValue={userUpdate.maLoaiNguoiDung}
+                                    name="maLoaiNguoiDung"
+                                    onChange={this.hanldeOnchange} />
                             </div>
                             <div className="form-group">
-                                <div className="col">
+                                <div className="col updateUser">
                                     <button type="submit" className="btn btn-primary btn-block">Save Changes</button>
                                 </div>
                             </div>

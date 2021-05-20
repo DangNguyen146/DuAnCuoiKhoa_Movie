@@ -1,8 +1,10 @@
 import {
-    UPDATE_MOVIE_REQUEST,
-    UPDATE_MOVIE_SUCCESS,
-    UPDATE_MOVIE_FAILED,
-} from "./constant";
+    CINEMA_INFOR_REQUEST,
+    CINEMA_INFOR_SUCCESS,
+    CINEMA_INFOR_FAILED,
+  } from "./constant";
+
+
 
 let initialState = {
     loading: false,
@@ -11,24 +13,21 @@ let initialState = {
 };
 
 
-
-
-const updateMovieReducer = (state = initialState, action) => {
-  
+const cinemaInforReducer = (state = initialState, action) => {
     switch (action.type) {
-        case UPDATE_MOVIE_REQUEST:
+        case CINEMA_INFOR_REQUEST:
             state.loading = true;
             state.data = null;
             state.err = null;
             return { ...state };
 
-        case UPDATE_MOVIE_SUCCESS:
+        case CINEMA_INFOR_SUCCESS:
             state.loading = false;
             state.data = action.payload;
             state.err = null;
             return { ...state };
 
-        case UPDATE_MOVIE_FAILED:
+        case CINEMA_INFOR_FAILED:
             state.loading = false;
             state.data = null;
             state.err = action.payload;
@@ -38,4 +37,4 @@ const updateMovieReducer = (state = initialState, action) => {
     }
 };
 
-export default updateMovieReducer;
+export default cinemaInforReducer;

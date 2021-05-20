@@ -26,6 +26,9 @@ import updateMovieReducer from "./../../container/AdminTemplate/MoviePage/Update
 import movieInforReducer from "./../../container/AdminTemplate/MoviePage/MovieInforPage/modules/reducer";
 import listCinemaReducer from "./../../container/AdminTemplate/CinemaPage/ListCinemaPage/modules/reducer";
 import groupCinemaReducer from "./../../container/AdminTemplate/CinemaPage/ThongTinTheoCumRap/modules/reducer";
+import listTicketReducer from "./../../container/AdminTemplate/TicketPage/DanhSachPhongVe/modules/reducer";
+import groupSystemCinemaReducer from "./../../container/AdminTemplate/CinemaPage/ThongTinLichChieuHeThongRap/modules/reducer";
+import cinemaInforReducer from "./../../container/AdminTemplate/TicketPage/LayThongTinLichChieu/modules/reducer";
 
 const rootReducer = combineReducers({
   userCreateReducer,
@@ -56,6 +59,9 @@ const rootReducer = combineReducers({
   movieInforReducer,
   listCinemaReducer,
   groupCinemaReducer,
+  listTicketReducer,
+  groupSystemCinemaReducer,
+  cinemaInforReducer,
 });
 
 export default rootReducer;

@@ -23,7 +23,7 @@ export const fetchDeleteUserApi = (account) => {
         },
       })
         .then((result) => {
-          console.log(result.data);
+        
           dispatch(actDeleteUserSuccess(result.data));
         })
         .catch((err) => {

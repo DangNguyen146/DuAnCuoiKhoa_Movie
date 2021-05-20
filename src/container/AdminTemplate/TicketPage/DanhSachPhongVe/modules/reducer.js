@@ -1,8 +1,8 @@
 import {
-    UPDATE_MOVIE_REQUEST,
-    UPDATE_MOVIE_SUCCESS,
-    UPDATE_MOVIE_FAILED,
-} from "./constant";
+    LIST_TICKET_REQUEST,
+    LIST_TICKET_SUCCESS,
+    LIST_TICKET_FAILED,
+  } from "./constant";
 
 let initialState = {
     loading: false,
@@ -11,24 +11,22 @@ let initialState = {
 };
 
 
-
-
-const updateMovieReducer = (state = initialState, action) => {
-  
+const listTicketReducer = (state = initialState, action) => {
+    // console.log("action: ", action);
     switch (action.type) {
-        case UPDATE_MOVIE_REQUEST:
+        case LIST_TICKET_REQUEST:
             state.loading = true;
             state.data = null;
             state.err = null;
             return { ...state };
 
-        case UPDATE_MOVIE_SUCCESS:
+        case LIST_TICKET_SUCCESS:
             state.loading = false;
             state.data = action.payload;
             state.err = null;
             return { ...state };
 
-        case UPDATE_MOVIE_FAILED:
+        case LIST_TICKET_FAILED:
             state.loading = false;
             state.data = null;
             state.err = action.payload;
@@ -38,4 +36,4 @@ const updateMovieReducer = (state = initialState, action) => {
     }
 };
 
-export default updateMovieReducer;
+export default listTicketReducer;

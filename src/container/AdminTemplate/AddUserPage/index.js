@@ -30,11 +30,21 @@ class AddUser extends Component {
 
   render() {
     return (
-     
-      <div className="container" >
-        <h2 style={{ textAlign: 'center' }}>Thêm người dùng</h2>
-        <div className="row p-5" style={{ justifyContent: 'center' }}>
-          <div className="col-sm-7" style={{ border: '1px solid black' }}>
+
+      <div className="container " >
+        {/* <h2 style={{ textAlign: 'center' }}>Thêm người dùng</h2> */}
+
+        <div className="row p-5 " style={{ justifyContent: 'center' }}>
+
+          <div className="col-sm-7 addUser" >
+            <div className="table-title">
+              <div className="row">
+                <div className="col">
+                  <h2 style={{ color: 'white', textAlign: 'center' }}>Thêm người dùng</h2>
+                </div>
+
+              </div>
+            </div>
             <form onSubmit={this.addUser} style={{ padding: 10 }}>
               <div className="form-group">
                 <label htmlFor="fullName">Họ tên</label>
@@ -71,18 +81,18 @@ class AddUser extends Component {
                   onChange={this.hanldeOnchange}
                 />
               </div>
-          
+
               <div className="form-group">
                 <label htmlFor="fullName">Loại người dùng</label>
                 <select id="inputState" className="form-control" name="maLoaiNguoiDung"
                   onChange={this.hanldeOnchange}>
                   <option selected>QuanTri</option>
                   <option selected>KhachHang</option>
-                
+
                 </select>
               </div>
               <div className="form-group">
-                <div className="col">
+                <div className="col btnAddUser">
                   <button type="submit" className="btn btn-primary btn-block">Thêm người dùng</button>
                 </div>
               </div>

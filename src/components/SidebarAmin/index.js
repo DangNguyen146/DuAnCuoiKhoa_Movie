@@ -74,6 +74,23 @@ class Sidebar extends Component {
             </li>
 
             <li className="nav-item">
+              <a className="nav-link" data-toggle="collapse" href="#ui-basic-3" aria-expanded="false" aria-controls="ui-basic">
+                <span className="menu-title">Quản lý vé</span>
+                <i className="menu-arrow" />
+                <i className="mdi mdi-ticket menu-icon" />
+              </a>
+              <div className="collapse" id="ui-basic-3">
+                <ul className="nav flex-column sub-menu">
+                  <li className="nav-item"> <NavLink className="nav-link" to="/list-ticket">Danh sách phòng vé</NavLink></li>
+                 <li className="nav-item"> <NavLink className="nav-link" to="/cinema-infor">Thông tin lịch chiếu phim</NavLink></li>
+                
+               {/*   <li className="nav-item"> <NavLink className="nav-link" to="/">Thông tin lịch chiếu hệ thống rạp</NavLink></li>
+                  <li className="nav-item"> <NavLink className="nav-link" to="/">Thông tin lịch chiếu phim</NavLink></li> */}
+                </ul>
+              </div>
+            </li>
+
+            <li className="nav-item">
               <a className="nav-link" data-toggle="collapse" href="#ui-basic-4" aria-expanded="false" aria-controls="ui-basic">
                 <span className="menu-title">Quản lý rạp chiếu</span>
                 <i className="menu-arrow" />
