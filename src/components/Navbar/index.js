@@ -9,7 +9,7 @@ export default class NavbarHome extends Component {
         ref={this.myRef}
         onScroll={this.onScroll}
         className="navbar navbar-expand-md navbar-light justify-content-between"
-        id="navbar"
+        id="navbars"
       >
         <div className="navbar-star " style={{ width: 150 }}>
           <NavLink className="nav-link navbar-brand" to="/">
@@ -22,12 +22,12 @@ export default class NavbarHome extends Component {
           </NavLink>
         </div>
         {/* responsive */}
-        <div className="menu-wrap d-block d-md-none">
+        <div className="menu-wraps d-block d-md-none">
           <input type="checkbox" className="toggler" />
           <div className="hamburger">
             <div />
           </div>
-          <div className="menu">
+          <div className="menus">
             <div>
               <div>
                 <ul>

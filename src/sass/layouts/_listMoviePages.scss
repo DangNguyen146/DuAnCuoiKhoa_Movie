@@ -1,6 +1,10 @@
 .listMoviePage {
+    font-family: "Roboto", sans-serif !important;
     position: relative;
     // padding: 3rem 0;
+    .card {
+        margin-top: 0 !important;
+    }
     .slick-slider.slick-initialized {
         min-height: 755.994px;
     }

@@ -30,6 +30,7 @@
 }
 
 .Loader {
+  font-family: "Roboto", sans-serif !important;
   height: 100%;
 }
 
@@ -424,6 +425,10 @@
   }
 }
 
+#carouselExampleIndicators {
+  font-family: "Roboto", sans-serif !important;
+}
+
 #carouselExampleIndicators .first-child {
   transition: all 0.5s;
 }
@@ -486,7 +491,8 @@ root {
   --menu-speed: 0.75s;
 }
 
-#navbar {
+#navbars {
+  font-family: "Roboto", sans-serif !important;
   position: fixed;
   width: 100%;
   top: 0px;
@@ -495,28 +501,28 @@ root {
   z-index: 9;
 }
 
-#navbar .collapse .navbar-center .navbar-nav .nav-item a {
+#navbars .collapse .navbar-center .navbar-nav .nav-item a {
   transition: all 0.3s;
 }
 
-#navbar .collapse .navbar-center .navbar-nav .nav-item a:hover {
+#navbars .collapse .navbar-center .navbar-nav .nav-item a:hover {
   color: #fb543b;
 }
 
-#navbar .collapse .navbar-center .navbar-nav .active a {
+#navbars .collapse .navbar-center .navbar-nav .active a {
   color: #fb543b;
 }
 
-#navbar .bg-orange {
+#navbars .bg-orange {
   color: #fff !important;
   background-color: #fb543b;
 }
 
-#navbar .btn-focus {
+#navbars .btn-focus {
   position: relative;
 }
 
-#navbar .btn-focus span {
+#navbars .btn-focus span {
   width: 50px;
   height: 50px;
   position: absolute;
@@ -540,7 +546,7 @@ root {
   }
 }
 
-#navbar .menu-wrap {
+#navbars .menu-wraps {
   position: fixed;
   top: 0;
   right: 0;
@@ -551,7 +557,7 @@ root {
   /*show menu*/
 }
 
-#navbar .menu-wrap .toggler {
+#navbars .menu-wraps .toggler {
   position: absolute;
   top: 0;
   right: 0;
@@ -562,7 +568,7 @@ root {
   opacity: 0;
 }
 
-#navbar .menu-wrap .hamburger {
+#navbars .menu-wraps .hamburger {
   position: absolute;
   top: 0;
   right: 0;
@@ -576,7 +582,7 @@ root {
   justify-content: center;
 }
 
-#navbar .menu-wrap .hamburger > div {
+#navbars .menu-wraps .hamburger > div {
   position: relative;
   width: 100%;
   height: 2px;
@@ -587,8 +593,8 @@ root {
   transition: all 0.4s ease;
 }
 
-#navbar .menu-wrap .hamburger > div::before,
-#navbar .menu-wrap .hamburger > ::after {
+#navbars .menu-wraps .hamburger > div::before,
+#navbars .menu-wraps .hamburger > ::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -598,40 +604,40 @@ root {
   background-color: inherit;
 }
 
-#navbar .menu-wrap .hamburger > div::after {
+#navbars .menu-wraps .hamburger > div::after {
   top: 10px;
 }
 
-#navbar .menu-wrap .toggler:checked + .hamburger > div {
+#navbars .menu-wraps .toggler:checked + .hamburger > div {
   transform: rotate(135deg);
 }
 
-#navbar .menu-wrap .toggler:checked + .hamburger > div::before,
-#navbar .menu-wrap .toggler:checked + .hamburger > div::after {
+#navbars .menu-wraps .toggler:checked + .hamburger > div::before,
+#navbars .menu-wraps .toggler:checked + .hamburger > div::after {
   top: 0;
   transform: rotate(90deg);
 }
 
-#navbar .menu-wrap .toggler:checked:hover + .hamburger > div {
+#navbars .menu-wraps .toggler:checked:hover + .hamburger > div {
   transform: rotate(225deg);
   background-color: #fff;
 }
 
-#navbar .menu-wrap .toggler:checked ~ .menu {
+#navbars .menu-wraps .toggler:checked ~ .menus {
   opacity: 1;
   visibility: visible;
 }
 
-#navbar .menu-wrap .toggler:checked ~ .menu > div {
+#navbars .menu-wraps .toggler:checked ~ .menus > div {
   transform: translateX(40%);
 }
 
-#navbar .menu-wrap .toggler:checked ~ .menu > div > div {
+#navbars .menu-wraps .toggler:checked ~ .menus > div > div {
   opacity: 1;
   transition: opacity 0.4s ease;
 }
 
-#navbar .menu-wrap .menu {
+#navbars .menu-wraps .menus {
   position: fixed;
   top: 0;
   right: 0;
@@ -646,7 +652,7 @@ root {
   background-color: rgba(0, 0, 0, 0.404);
 }
 
-#navbar .menu-wrap .menu > div {
+#navbars .menu-wraps .menus > div {
   background-color: var(--overlay-color);
   border-radius: 0.5;
   width: 60vh;
@@ -660,7 +666,7 @@ root {
   background-color: #fff;
 }
 
-#navbar .menu-wrap .menu > div > div {
+#navbars .menu-wraps .menus > div > div {
   text-align: left;
   max-width: 90vw;
   max-height: 100vh;
@@ -668,12 +674,12 @@ root {
   transition: opacity 0.4s ease;
 }
 
-#navbar .menu-wrap .menu > div > div > ul {
+#navbars .menu-wraps .menus > div > div > ul {
   width: 60vh;
   padding: 0;
 }
 
-#navbar .menu-wrap .menu > div > div > ul > li {
+#navbars .menu-wraps .menus > div > div > ul > li {
   list-style: none;
   font-size: 17px !important;
   color: black;
@@ -681,11 +687,15 @@ root {
   padding: 0 1rem 0rem 1rem;
 }
 
-#navbar .menu-wrap .menu > div > div > ul > li > a {
+#navbars .menu-wraps .menus > div > div > ul > li > a {
   color: black;
   font-size: 17px;
   text-decoration: none;
   transition: color 0.4s ease;
+}
+
+#propDownUser {
+  font-family: "Roboto", sans-serif !important;
 }
 
 #propDownUser .dropdown {
@@ -737,14 +747,13 @@ root {
 }
 
 #propDownUser .dropdown_menu li {
-  display: none;
   border-radius: 0.25rem;
   color: #fff;
   background-color: #fb543b;
   padding: 10px 40px 7px 2px;
   margin: 0 0.3rem;
   font-size: 16px;
-  opacity: 0;
+  opacity: 1;
   transition: all 0.3s;
 }
 
@@ -795,6 +804,10 @@ root {
     opacity: 1;
     transform: translateX(0px);
   }
+}
+
+#carouselExampleIndicators {
+  font-family: "Roboto", sans-serif !important;
 }
 
 #carouselExampleIndicators .first-child {
@@ -854,7 +867,12 @@ root {
 }
 
 .listMoviePage {
+  font-family: "Roboto", sans-serif !important;
   position: relative;
+}
+
+.listMoviePage .card {
+  margin-top: 0 !important;
 }
 
 .listMoviePage .slick-slider.slick-initialized {
@@ -960,6 +978,7 @@ root {
 }
 
 #listmovieitem {
+  font-family: "Roboto", sans-serif !important;
   position: relative;
 }
 
@@ -984,6 +1003,7 @@ root {
 }
 
 footer {
+  font-family: "Roboto", sans-serif !important;
   background-color: #222;
   font-size: 12px;
   padding: 2rem 0;
@@ -1039,6 +1059,7 @@ footer .img-social .row .row img:hover {
 }
 
 .mobile-app {
+  font-family: "Roboto", sans-serif !important;
   font-size: 12px;
   width: 100%;
   background-size: contain;
@@ -1068,6 +1089,7 @@ footer .img-social .row .row img:hover {
 }
 
 .cinemaListMovie {
+  font-family: "Roboto", sans-serif !important;
   border: 1px solid rgba(0, 0, 0, 0.125);
   height: 650px;
   overflow: hidden;
@@ -1143,8 +1165,21 @@ footer .img-social .row .row img:hover {
   background: #555;
 }
 
+.accordion {
+  font-family: "Roboto", sans-serif !important;
+}
+
 .accordion .btn-link:hover {
   text-decoration: none !important;
+}
+
+.accordion .card {
+  margin: 0 !important;
+}
+
+.profile {
+  font-family: "Roboto", sans-serif !important;
+  margin-top: 100px !important;
 }
 
 .profile .avatar-proflie .logo {
@@ -1168,6 +1203,10 @@ footer .img-social .row .row img:hover {
 .profile .profile-item2 .nav-item a {
   color: #000 !important;
   font-weight: 500 !important;
+}
+
+.pagenotFound {
+  font-family: "Roboto", sans-serif !important;
 }
 
 @keyframes floating {
@@ -1305,5 +1344,9 @@ body {
   padding: 0px 0 0 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a {
+  font-family: "Roboto", sans-serif !important;
 }
 /*# sourceMappingURL=main.css.map */

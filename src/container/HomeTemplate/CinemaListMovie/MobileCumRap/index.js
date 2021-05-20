@@ -77,7 +77,7 @@ class MobileCumRap extends Component {
       );
     };
     return (
-      <div className="accordion" id="accordionExample">
+      <div className="accordion mt-5" id="accordionExample">
         {renderLogo()}
       </div>
     );

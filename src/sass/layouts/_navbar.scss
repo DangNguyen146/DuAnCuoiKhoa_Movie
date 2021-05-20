@@ -3,8 +3,8 @@ root {
     --overlay-color: rgba(0, 140, 255, 0.85);
     --menu-speed: 0.75s;
 }
-
-#navbar {
+#navbars {
+    font-family: "Roboto", sans-serif !important;
     position: fixed;
     width: 100%;
     top: 0px;
@@ -53,7 +53,7 @@ root {
         }
     }
     // reponsive
-    .menu-wrap {
+    .menu-wraps {
         position: fixed;
         top: 0;
         right: 0;
@@ -123,19 +123,19 @@ root {
             background-color: #fff;
         }
         /*show menu*/
-        .toggler:checked ~ .menu {
+        .toggler:checked ~ .menus {
             opacity: 1;
             visibility: visible;
         }
 
-        .toggler:checked ~ .menu > div {
+        .toggler:checked ~ .menus > div {
             transform: translateX(40%);
         }
-        .toggler:checked ~ .menu > div > div {
+        .toggler:checked ~ .menus > div > div {
             opacity: 1;
             transition: opacity 0.4s ease;
         }
-        .menu {
+        .menus {
             position: fixed;
             top: 0;
             right: 0;
@@ -149,7 +149,7 @@ root {
             transition: all 0.4s;
             background-color: rgba(0, 0, 0, 0.404);
         }
-        .menu > div {
+        .menus > div {
             background-color: var(--overlay-color);
             border-radius: 0.5;
             width: 60vh;
@@ -162,26 +162,26 @@ root {
             transition: all 0.4s ease;
             background-color: #fff;
         }
-        .menu > div > div {
+        .menus > div > div {
             text-align: left;
             max-width: 90vw;
             max-height: 100vh;
             opacity: 0;
             transition: opacity 0.4s ease;
         }
-        .menu > div > div > ul {
+        .menus > div > div > ul {
             width: 60vh;
             padding: 0;
             // margin: 1rem 0;
         }
-        .menu > div > div > ul > li {
+        .menus > div > div > ul > li {
             list-style: none;
             font-size: 17px !important;
             color: black;
             font-size: 1.5rem;
             padding: 0 1rem 0rem 1rem;
         }
-        .menu > div > div > ul > li > a {
+        .menus > div > div > ul > li > a {
             color: black;
             font-size: 17px;
             text-decoration: none;

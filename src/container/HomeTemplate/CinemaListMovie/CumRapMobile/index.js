@@ -26,7 +26,7 @@ class CumRapMobile extends Component {
         data.map((item, i) => {
           return (
             <Link
-              className="btn btn-link btn-block  shadow-none  border-0 text-left p-0"
+              className="btn btn-link btn-block  shadow-none  border-0 text-left p-0 "
               to={`/detailCinema/${
                 this.props.maHeThongRap + "/" + item.maCumRap
               }`}

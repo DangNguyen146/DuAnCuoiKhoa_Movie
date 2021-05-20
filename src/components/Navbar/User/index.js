@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { LogoutApi } from "./../../../container/HomeTemplate/AccUser/Login/modules/actionforLogin";
 
 class User extends Component {
   handelOnLogout = () => {
+    localStorage.removeItem("idDatVe");
     this.props.fectchLogOut();
   };
   render() {
@@ -18,31 +19,36 @@ class User extends Component {
               </span>
               <i className="fa fa-angle-down"></i>
               <ul className="dropdown_menu dropdown_menu-5">
-                <li className="dropdown_item-1">
-                  <NavLink to="/user">
-                    <i className="fa fa-history"></i>Lịch sử đặt vé
-                  </NavLink>
-                </li>
-                <li className="dropdown_item-2">
-                  <NavLink to="/user">
-                    <i className="fa fa-user"></i>Thông tin cá nhân
-                  </NavLink>
-                </li>
-                <li className="dropdown_item-3">
-                  <NavLink to="/user">
-                    <i className="fa fa-user-edit"></i>Cập nhật thông tin
-                  </NavLink>
-                </li>
-                <li className="dropdown_item-4">
-                  <NavLink
-                    onClick={() => {
-                      this.handelOnLogout();
-                    }}
-                    to="/"
+                <NavLink to="/user" className="w-100 text-decoration-none">
+                  <li
+                    className="dropdown_item-1"
+                    className="text-decoration-none text-light"
                   >
+                    <i className="fa fa-history"></i>
+                    <span>Lịch sử đặt vé</span>
+                  </li>
+                </NavLink>
+                <NavLink to="/user" className="text-decoration-none">
+                  <li className="dropdown_item-2">
+                    <i className="fa fa-user"></i>Thông tin cá nhân
+                  </li>
+                </NavLink>
+                <NavLink to="/user" className="text-decoration-none">
+                  <li className="dropdown_item-3">
+                    <i className="fa fa-user-edit"></i>Cập nhật thông tin
+                  </li>
+                </NavLink>
+                <NavLink
+                  className="text-decoration-none"
+                  onClick={() => {
+                    this.handelOnLogout();
+                  }}
+                  to="/"
+                >
+                  <li className="dropdown_item-4">
                     <i className="fa fa-sign-out-alt"></i>Đăng xuất
-                  </NavLink>
-                </li>
+                  </li>
+                </NavLink>
               </ul>
             </div>
           </div>

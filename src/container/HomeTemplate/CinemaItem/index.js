@@ -153,9 +153,14 @@ export default function CinemaItem() {
                           ) : (
                             false
                           )}
-                          <Button className="col-4 col-sm-3 col-md-2 w-75 btn border btn-outline-redorange text-redorange mb-3 mr-4">
-                            {itemTime.ngayChieuGioChieu.slice(12, 16)}
-                          </Button>
+                          <Link
+                            to={`/datve/${itemTime.maLichChieu}`}
+                            className="text-decoration-none"
+                          >
+                            <Button className="col-4 col-sm-3 col-md-2 w-75 btn border btn-outline-redorange text-redorange mb-3 mr-4">
+                              {itemTime.ngayChieuGioChieu.slice(12, 16)}
+                            </Button>
+                          </Link>
                         </>
                       );
                     })}

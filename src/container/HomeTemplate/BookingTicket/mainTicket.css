@@ -1,4 +1,5 @@
 .getTicket {
+  margin-top: 66px;
   height: 93.1vh;
   width: 100%;
 }
@@ -63,7 +64,7 @@
   .color-overplay {
   position: absolute;
   width: 100%;
-  height: 93.1vh;
+  height: 100vh;
   background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0.438));
 }
 
