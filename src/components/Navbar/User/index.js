@@ -79,7 +79,7 @@ class User extends Component {
       return (
         <div>
           <NavLink
-            className="btn btn-redorange btn-focus mr-2"
+            className="btn btn-redorange btn-focus mr-2 rounded"
             type="submit"
             onClick={() => {
               localStorage.setItem("createAcc", JSON.stringify("false"));
@@ -89,7 +89,7 @@ class User extends Component {
             Đăng nhập
           </NavLink>
           <NavLink
-            className="btn btn-outline-redorange btn-focus mr-2"
+            className="btn btn-outline-redorange btn-focus mr-2 rounded"
             type="submit"
             onClick={() => {
               localStorage.setItem("createAcc", JSON.stringify("true"));

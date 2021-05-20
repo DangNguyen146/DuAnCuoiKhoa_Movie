@@ -34,6 +34,7 @@ class ThongTinCaNhan extends Component {
     if (this.state.taiKhoan === "" || this.state.matKhau === "") {
       alert("Nhập tên đăng nhập/ mật khẩu");
     } else {
+      localStorage.removeItem("idDatVe");
       this.props.fetchUpdate(this.state, data.accessToken);
     }
   };
